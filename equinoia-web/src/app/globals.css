@@ -5,4 +5,12 @@
 :root {
     padding: 0;
     margin: 0;
+    background-color: 'black';
+}
+
+
+@layer base {
+    body {
+        @apply dark:bg-rice-dark bg-rice
+    }
 }
