@@ -1,11 +1,10 @@
-'use client';
-
 import Link from "next/link"
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { motion } from "framer-motion"
 import { Staatliches } from 'next/font/google'
 import Section from '@/components/section'
+import Title from "@/components/title";
 config.autoAddCss = false
 
 const staatliches = Staatliches({weight:'400', subsets:['latin']})
@@ -16,9 +15,7 @@ export default function Home() {
 
     return (
         <main className="dark:text-white">
-            <div className="bg-gradient-to-r from-cyan-400 to-yellow-400 dark:from-cyan-700 dark:to-yellow-600 overflow-hidden p-5">
-                <motion.h1 initial={{scale: 0, x: '-100%'}} animate={{scale: 1, x: 0, zIndex: 0}} transition={{duration: 0.7, type: 'spring'}} whileHover={{scale: 1.5}} className={"text-7xl sm:text-5xl lg:text-9xl text-center text-white dark:[text-shadow:rgba(255,255,255,0.5)_0_0_20px] hover:dark:[text-shadow:rgba(255,255,255,0.8)_0_0_20px] transition-all " + staatliches.className}>Equinoia</motion.h1>
-            </div>
+            <Title />
             <Section title="Why Equinoia?">
                 <p>{placeholder}</p>
                 <img src="office_man.jpg" alt="" className="w-52 h-52 float-right rounded-full" />

@@ -14,10 +14,10 @@ export default function () {
                 <div className='text-left'>
                     <h1 className='text-4xl dark:text-white text-gold-400'>Application Form</h1>
                     <p className='text-gold-300 dark:text-zinc-400 font-light text-lg'>Become our partners!</p>
-                    <div className='mb-10 h-0.5 w-3/4 md:xl:w-2/5 bg-yellow-600'></div>
+                    <div className='mb-10 h-0.5 w-3/4 md:xl:w-2/5 bg-yellow-600 rounded'></div>
                 </div>
                 <form action="/api/application" method="post" className='flex flex-col'>
-                    <div className='flex flex-row flex-wrap'>
+                    <div className='flex flex-row flex-wrap justify-center items-center'>
                         <InputSection title="Personal Details">
                             <InputBar type="text" id="name" label="Name" placeholder="Name" />
                             <InputBar type="text" id="secondName" label="Second Name" placeholder="Second Name" />
