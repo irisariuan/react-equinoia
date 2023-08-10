@@ -1,4 +1,4 @@
-import Link from "next/link"
+import NavBtn from '@/components/navbtn'
 import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { motion } from "framer-motion"
@@ -16,22 +16,7 @@ export default function Home() {
     return (
         <main className="dark:text-white">
             <Title />
-            <Section title="Why Equinoia?">
-                <p>{placeholder}</p>
-                <img src="office_man.jpg" alt="" className="w-52 h-52 float-right rounded-full" />
-            </Section>
-            <Section title="Why Equinoia?">
-                <p>{placeholder}</p>
-                <img src="office_man.jpg" alt="" className="w-52 h-52 float-right rounded-full" />
-            </Section>
-            <Section title="Why Equinoia?">
-                <p>{placeholder}</p>
-                <img src="office_man.jpg" alt="" className="w-52 h-52 float-right rounded-full" />
-            </Section>
-            <Section title="Why Equinoia?">
-                <p>{placeholder}</p>
-                <img src="office_man.jpg" alt="" className="w-52 h-52 float-right rounded-full" />
-            </Section>
+            <NavBtn link="/partnership" name='Partnership' />
         </main>
     )
 }
