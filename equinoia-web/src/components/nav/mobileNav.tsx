@@ -7,6 +7,7 @@ import { motion, useAnimate } from "framer-motion";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import React from "react";
 import { useState } from "react";
 
 export default function ({ links }: { links: string[][] }) {
@@ -41,20 +42,20 @@ export default function ({ links }: { links: string[][] }) {
                 </button>
             </div>
 
-            <motion.div id="mobileMenu" ref={menuRef} className={"origin-top fixed top-0 left-0 h-screen w-screen bg-white dark:bg-nav-dark z-[80] overflow-hidden " + (active ? '' : 'hidden ')}>
-                <div>
+            <motion.div id="mobileMenu" ref={menuRef} className={"origin-top fixed top-0 left-0 h-screen w-screen bg-rice/80 dark:bg-nav-dark/80 z-[80] backdrop-blur-3xl overflow-hidden " + (active ? '' : 'hidden ')}>
+                <div className="block">
                     <button onClick={closeHandler} className="float-right m-4">
-                        <FontAwesomeIcon icon={faCircleXmark} className="text-3xl" />
+                        <FontAwesomeIcon icon={faCircleXmark} className="text-3xl lg:text-4xl" />
                     </button>
-                    <button className="bg-white dark:bg-gray-950 duration-200 transition-all hover:bg-gray-950 dark:hover:bg-white rounded-full w-8 h-8 flex justify-center items-center [&>*]:text-gray-950 [&>*]:dark:text-white [&:hover>*]:text-white [&:hover>*]:dark:text-gray-950 fixed m-4" onClick={handleDarkMode}>
-                        <FontAwesomeIcon icon={faCircleHalfStroke} size="lg" />
+                    <button className="bg-white dark:bg-gray-950 duration-200 transition-all hover:bg-gray-950 dark:hover:bg-white rounded-full p-2 flex justify-center items-center [&>*]:text-gray-950 [&>*]:dark:text-white [&:hover>*]:text-white [&:hover>*]:dark:text-gray-950 fixed m-4" onClick={handleDarkMode}>
+                        <FontAwesomeIcon icon={faCircleHalfStroke} className="text-lg lg:text-3xl" />
                     </button>
                 </div>
-                <div className="flex justify-center items-center flex-col mt-20">
+                <div className="flex justify-center items-center flex-col mt-20 lg:mt-28">
                     {links.map(v => (
-                        <Link href={v[1]} className="flex items-center justify-center m-4" onClick={closeHandler}>
-                            <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-xl" />
-                            <span className="text-3xl">
+                        <Link key={v[1]} href={v[1]} className="flex items-center justify-center m-4 [&>*]:hover:text-blue-500" onClick={closeHandler}>
+                            <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5" />
+                            <span className="text-3xl lg:text-5xl">
                                 {v[0]}
                             </span>
                         </Link>
