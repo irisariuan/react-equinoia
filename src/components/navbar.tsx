@@ -10,15 +10,24 @@ const righteous = Righteous({ weight: '400', subsets: ['latin'] })
 
 
 export default function () {
-    const [isMobile, setMobileState] = useState(window.matchMedia('(orientation: portrait)').matches)
-    const links = [['Home', '/'], ['Contact Us', '/contact'], ['Partnership', '/partnership']]
-    window.addEventListener('resize', () => {
-        if (window.matchMedia('(orientation: portrait)').matches && !isMobile) {
-            setMobileState(true)
-        } else if (window.matchMedia('(orientation: landscape)').matches && isMobile) {
-            setMobileState(false)
+    const [isMobile, setMobileState] = useState(true)
+
+    useEffect(() => {
+        setMobileState(window.matchMedia('(orientation: portrait)').matches)
+        const f = () => {
+            if (window.matchMedia('(orientation: portrait)').matches && !isMobile) {
+                setMobileState(true)
+            } else if (window.matchMedia('(orientation: landscape)').matches && isMobile) {
+                setMobileState(false)
+            }
         }
-    })
+        window.addEventListener('resize', f)
+        return () => {
+            window.removeEventListener('resize', f)
+        }
+    }, [])
+
+    const links = [['Home', '/'], ['Contact Us', '/contact'], ['Partnership', '/partnership']]
 
     return (
         <div className="z-50 flex sticky top-0 bg-nav/70 dark:bg-nav-dark/70 flex-wrap gap-y-4 p-2 m-0 items-center dark:text-white backdrop-blur-md border-b border-yellow-200/50 dark:border-white/50">
