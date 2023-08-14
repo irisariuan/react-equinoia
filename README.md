@@ -14,8 +14,10 @@ Report bugs and request features by opening issues, issues will be reviewed
 > 3. Follow its instruction
 
 ## Development
-After setting up the project, run `npm run dev` and wait for first render.
-Then, you should be able to see the page on <http://localhost:3000>, start editing the codes and it should work!.
+After setting up the project, run `npm run dev` and wait for first render
+
+Then, you should be able to see the page on <http://localhost:3000>, start editing the codes and it should work!
+
 Please remember to only change contents in components folder and in pages folder
 
 ## Hosting
