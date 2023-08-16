@@ -9,13 +9,13 @@ export default function () {
             <div className="flex justify-center items-center w-screen flex-col">
                 <p className="text-xl font-bold mb-5">Contact Us</p>
                 <div className="flex flex-row items-center justify-center gap-2">
-                    <Link href="https://www.instagram.com/" target="_blank" >
-                        <FontAwesomeIcon icon={faInstagram} className="mr-2" />
+                    <Link href="https://www.instagram.com/" target="_blank" className="flex items-center justify-center" >
+                        <FontAwesomeIcon icon={faInstagram} className="mr-2 text-xl" />
                         <span className="">Instagram</span>
                     </Link>
                     <div className="h-4 w-[1px] bg-rice-content" />
-                    <div>
-                        <FontAwesomeIcon icon={faEnvelope} className="mr-2" />
+                    <div className="flex items-center justify-center">
+                        <FontAwesomeIcon icon={faEnvelope} className="mr-2 text-xl" />
                         <span>mc.equinoia2324@gmail.com</span>
                     </div>
                 </div>
