@@ -38,25 +38,28 @@ export default function ({ links }: { links: string[][] }) {
         <div className="overflow-hidden">
 
             <motion.button onClick={activeHandler} className="mx-4 select-none" id="navMobileBtn" animate={{ transition: { duration: 0.3 }, opacity: [0, 1] }}>
-                <FontAwesomeIcon icon={faBars} className="text-2xl text-rice-dark dark:text-white" />
+                <FontAwesomeIcon icon={faBars} className="text-2xl lg:text-4xl text-rice-dark dark:text-white" />
             </motion.button>
 
 
             <AnimatePresence>
                 {active &&
                     <motion.div id="mobileMenu" className="origin-top fixed top-0 left-0 h-screen w-screen bg-rice/80 dark:bg-nav-dark/80 z-[80] backdrop-blur-3xl overflow-hidden" initial={{ scaleY: 0 }} animate={{ scaleY: 1 }} exit={{ scaleY: 0 }} transition={{ duration: 0.3 }} >
-                        <div className="block">
-                            <motion.button onClick={activeHandler} className="float-right m-4 select-none [&>*]:hover:text-rice-dark/50 dark:[&>*]:hover:text-white/50" exit={{ opacity: [1, 0], scaleY: [1, 0], scaleX: [1, 5] }}>
+                        <div className="flex items-center">
+                            <div className="flex-1 m-4">
+                                <motion.img src="icon.jpg" className="w-8 h-8 lg:w-12 lg:h-12 rounded-full" exit={{scale: [1, 0]}} />
+                            </div>
+                            <motion.button onClick={activeHandler} className="m-4 select-none [&>*]:hover:text-rice-dark/50 dark:[&>*]:hover:text-white/50" exit={{ opacity: [1, 0], scaleY: [1, 0], scaleX: [1, 5] }}>
                                 <FontAwesomeIcon icon={faCircleXmark} className="text-3xl lg:text-4xl text-rice-dark dark:text-white" />
                             </motion.button>
                             {/* <motion.button className="bg-white dark:bg-gray-950 duration-200 transition-all rounded-full p-2 flex justify-center items-center fixed m-4 select-none" onClick={handleDarkMode} exit={{ scale: [1, 0] }} transition={{ duration: 0.2 }}>
                                 <FontAwesomeIcon icon={faCircleHalfStroke} className="text-lg lg:text-3xl" />
                             </motion.button> */}
                         </div>
-                        <motion.div className="flex justify-center items-center flex-col mt-20 lg:mt-28">
+                        <motion.div className="flex justify-center items-center flex-col">
                             {links.map(v => (
                                 <motion.div animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4 } }} transition={{ duration: 0.2 }} exit={{ scale: [1, 0] }}>
-                                    <Link key={v[1]} href={v[1]} className={"flex items-center justify-center m-4 " + ((pathname === v[1]) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
+                                    <Link key={v[1]} href={v[1]} className={"flex items-center justify-center m-4 lg:my-8 " + ((pathname === v[1]) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
                                         {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
                                         <span className="text-3xl lg:text-5xl text-rice-dark dark:text-white">{v[0]}</span>
                                     </Link>

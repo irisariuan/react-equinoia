@@ -5,11 +5,11 @@ import Link from "next/link";
 
 export default function () {
     return (
-        <div className="bg-rice p-3 flex w-screen flex-col items-center justify-center">
+        <div className="bg-rice p-3 flex w-screen flex-col items-center justify-center z-40">
             <div className="flex justify-center items-center w-screen flex-col">
                 <p className="text-xl font-bold mb-5">Contact Us</p>
                 <div className="flex flex-row items-center justify-center gap-2">
-                    <Link href="https://www.instagram.com/">
+                    <Link href="https://www.instagram.com/" target="_blank" >
                         <FontAwesomeIcon icon={faInstagram} className="mr-2" />
                         <span className="">Instagram</span>
                     </Link>

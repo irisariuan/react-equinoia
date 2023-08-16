@@ -15,9 +15,11 @@ export default function RootLayout({
 		<html lang="en">
 			<body className={inter.className + ' transition-all'}>
 				<Providers>
-					<div className='flex flex-col h-screen'>
+					<div className='flex flex-col h-screen w-screen'>
 						<Navbar />
-						{children}
+						<div className='h-fit'>
+							{children}
+						</div>
 						<div className='flex-1 flex items-end'>
 							<Footer />
 						</div>
