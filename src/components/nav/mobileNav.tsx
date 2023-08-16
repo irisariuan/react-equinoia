@@ -16,6 +16,7 @@ export default function ({ links }: { links: string[][] }) {
 
     let [active, setActive] = useState(false)
 
+    setTheme('light')
     function handleDarkMode() {
         console.log('clicked')
         setTheme(theme === 'dark' ? 'light' : 'dark')
@@ -37,7 +38,7 @@ export default function ({ links }: { links: string[][] }) {
         <div className="overflow-hidden">
 
             <motion.button onClick={activeHandler} className="mx-4 select-none" id="navMobileBtn" animate={{ transition: { duration: 0.3 }, opacity: [0, 1] }}>
-                <FontAwesomeIcon icon={faBars} className="text-3xl text-rice-dark dark:text-white" />
+                <FontAwesomeIcon icon={faBars} className="text-2xl text-rice-dark dark:text-white" />
             </motion.button>
 
 
@@ -48,15 +49,15 @@ export default function ({ links }: { links: string[][] }) {
                             <motion.button onClick={activeHandler} className="float-right m-4 select-none [&>*]:hover:text-rice-dark/50 dark:[&>*]:hover:text-white/50" exit={{ opacity: [1, 0], scaleY: [1, 0], scaleX: [1, 5] }}>
                                 <FontAwesomeIcon icon={faCircleXmark} className="text-3xl lg:text-4xl text-rice-dark dark:text-white" />
                             </motion.button>
-                            <motion.button className="bg-white dark:bg-gray-950 duration-200 transition-all rounded-full p-2 flex justify-center items-center fixed m-4 select-none" onClick={handleDarkMode} exit={{ scale: [1, 0] }} transition={{ duration: 0.2 }}>
+                            {/* <motion.button className="bg-white dark:bg-gray-950 duration-200 transition-all rounded-full p-2 flex justify-center items-center fixed m-4 select-none" onClick={handleDarkMode} exit={{ scale: [1, 0] }} transition={{ duration: 0.2 }}>
                                 <FontAwesomeIcon icon={faCircleHalfStroke} className="text-lg lg:text-3xl" />
-                            </motion.button>
+                            </motion.button> */}
                         </div>
                         <motion.div className="flex justify-center items-center flex-col mt-20 lg:mt-28">
                             {links.map(v => (
                                 <motion.div animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4 } }} transition={{ duration: 0.2 }} exit={{ scale: [1, 0] }}>
                                     <Link key={v[1]} href={v[1]} className={"flex items-center justify-center m-4 " + ((pathname === v[1]) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
-                                        <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" />
+                                        {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
                                         <span className="text-3xl lg:text-5xl text-rice-dark dark:text-white">{v[0]}</span>
                                     </Link>
                                 </motion.div>

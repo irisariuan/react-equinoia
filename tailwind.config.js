@@ -10,7 +10,7 @@ module.exports = {
 			backgroundImage: {
 			},
 			colors: {
-				'nav': '#d9caa0',
+				'nav': '#fdf9ee',
 				'nav-dark': '#363636',
 				'rice': '#fdf9ee',
 				'rice-dark': '#14120d',
