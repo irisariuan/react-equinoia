@@ -11,7 +11,7 @@
 
 @layer base {
 	body {
-		@apply dark:bg-rice-dark bg-rice
+		@apply dark:bg-rice-dark bg-white
 	}
 }
 
