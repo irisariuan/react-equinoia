@@ -16,8 +16,9 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en" className='bg-rice-content'>
-			<body className={inter.className + ' transition-all scrollbar'}>
+		<html lang="en" className='bg-rice'>
+			<meta name='theme-color' content='#fdf9ee' />
+			<body className={inter.className + ' transition-all scrollbar m-0 p-0'}>
 				<Providers>
 					{children}
 				</Providers>

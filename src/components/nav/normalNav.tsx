@@ -4,15 +4,15 @@ import { usePathname } from 'next/navigation'
 import { faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
-export default function ({links}: {links: string[][]}) {
+export default function ({ links }: { links: string[][] }) {
     const { theme, setTheme } = useTheme()
     const pathname = usePathname()
     setTheme('light')
+    
     function handleDarkMode() {
-        console.log('clicked')
         setTheme(theme === 'dark' ? 'light' : 'dark')
     }
-    
+
     return (
         <div className="flex flex-wrap content-center items-center justify-center">
             <div className="m-0 flex flex-wrap">
