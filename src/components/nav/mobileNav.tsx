@@ -1,26 +1,17 @@
 'use client';
 
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
-import { faBars, faChevronRight, faCircleHalfStroke } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AnimatePresence, animate, motion, useAnimate } from "framer-motion";
-import { useTheme } from "next-themes";
+import { AnimatePresence, animate, motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useState } from "react";
 
 export default function ({ links, setShouldShow }: { links: string[][], setShouldShow: Dispatch<SetStateAction<boolean>> }) {
-    const { theme, setTheme } = useTheme()
     const pathname = usePathname()
-
     let [active, setActive] = useState(false)
-
-    setTheme('light')
-    function handleDarkMode() {
-        
-        setTheme(theme === 'dark' ? 'light' : 'dark')
-    }
 
     function activeHandler() {
         setActive(!active)
@@ -53,9 +44,6 @@ export default function ({ links, setShouldShow }: { links: string[][], setShoul
                             <motion.button onClick={activeHandler} className="m-4 select-none [&>*]:hover:text-rice-dark/50 dark:[&>*]:hover:text-white/50" exit={{ opacity: [1, 0], scaleY: [1, 0], scaleX: [1, 5] }}>
                                 <FontAwesomeIcon icon={faCircleXmark} className="text-3xl lg:text-4xl text-rice-dark dark:text-white" />
                             </motion.button>
-                            {/* <motion.button className="bg-white dark:bg-gray-950 duration-200 transition-all rounded-full p-2 flex justify-center items-center fixed m-4 select-none" onClick={handleDarkMode} exit={{ scale: [1, 0] }} transition={{ duration: 0.2 }}>
-                                <FontAwesomeIcon icon={faCircleHalfStroke} className="text-lg lg:text-3xl" />
-                            </motion.button> */}
                         </div>
                         <motion.div className="flex justify-center items-center flex-col">
                             {links.map(v => (

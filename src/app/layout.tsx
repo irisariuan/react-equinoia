@@ -18,7 +18,7 @@ export default function RootLayout({
 	return (
 		<html lang="en" className='bg-rice'>
 			<meta name='theme-color' content='#fdf9ee' />
-			<body className={inter.className + ' transition-all scrollbar m-0 p-0'}>
+			<body className={inter.className + ' transition-all scrollbar m-0 p-0 w-screen overflow-x-hidden'}>
 				<Providers>
 					{children}
 				</Providers>
