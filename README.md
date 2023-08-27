@@ -21,9 +21,3 @@ Then, you should be able to see the page on <http://localhost:3000>, start editi
 
 ## Hosting
 Simply type `npm run start` in your terminal!
-
-## Todo
-1. - [ ] Docker file for quick installation
-2. - [X] Main Page Redesign
-3. - [ ] Better animation
-4. - [X] Footer
