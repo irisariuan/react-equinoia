@@ -24,6 +24,6 @@ Simply type `npm run start` in your terminal!
 
 ## Todo
 1. - [ ] Docker file for quick installation
-2. - [ ] Main Page Redesign
+2. - [X] Main Page Redesign
 3. - [ ] Better animation
 4. - [X] Footer
