@@ -3,14 +3,16 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Title from "@/components/title";
 import { motion } from 'framer-motion';
-import { faHandsClapping } from '@fortawesome/free-solid-svg-icons';
-import usePopup from '@/lib/usePopup';
-import { useEffect } from 'react';
+import { PopupContext, PopupView } from '@/lib/usePopup';
+import { useContext, useEffect } from 'react';
 
 config.autoAddCss = false
 
 export default function Home() {
-    const { addPopupBubble, PopupView } = usePopup()
+    const [popupList, setPopupList] = useContext(PopupContext)
+    useEffect(() => {
+        setPopupList([{ content: 'testing', duration: 0, title: 'hello world' }, ...popupList])
+    }, [])
     return (
         <main className="dark:text-white">
             <motion.div animate={{ backgroundColor: ['rgb(253, 249, 238)', 'rgb(255,255,255)'] }} transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse' }} className='bg-white h-screen w-full flex justify-center items-center flex-col'>
@@ -27,8 +29,7 @@ export default function Home() {
                     </motion.div>
                 </div>
             </motion.div>
-            <span onClick={() => {addPopupBubble({content: 'Testing', title: 'Hello world', duration: 2})}}>click me!</span>
-            <PopupView />
+            <span onClick={() => {console.log(setPopupList([{ content: 'testing', duration: 0.3, title: 'hello world' }, ...popupList]))}}>click</span>
         </main>
     )
 }
