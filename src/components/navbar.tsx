@@ -1,11 +1,11 @@
 'use client';
-import Link from "next/link";
 import { Righteous, Noto_Sans_TC } from "next/font/google";
 import NormalNav from "./nav/normalNav";
 import MobileNav from "./nav/mobileNav";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Banner from "./banner";
 import { AnimatePresence, motion, useAnimate } from "framer-motion";
+import { LinkObject } from "@/lib/nav";
 
 
 const righteous = Righteous({ weight: '400', subsets: ['latin'] })
@@ -63,7 +63,7 @@ export default function () {
         }
     }, [])
 
-    const links = [['Home', '/'], ['Contact Us', '/contact']]
+    const links: LinkObject[] = [{title: 'Home', content: '/'}, {}] 
 
     return (
         <div className="sticky top-0 w-screen z-50 origin-top" ref={r}>
