@@ -69,7 +69,7 @@ export default function () {
         <div className="sticky top-0 w-screen z-50 origin-top" ref={r}>
             <div className="z-50 flex bg-nav/80 dark:bg-nav-dark/80 flex-wrap gap-2 p-2 lg:p-5 m-0 w-screen items-center dark:text-white backdrop-blur-md border-b border-rice-content/50 dark:border-white/50 ">
                 <img src="school_icon.png" alt="" className="h-10 w-10 lg:h-12 lg:w-12" />
-                <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 " + righteous.className}>MCKLN | <Link href="/">Equinoia <span className={chinese.className}>凝晞</span></Link></span>
+                <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 "}>MCKLN | <Link href="/">Equinoia <span className={chinese.className}>凝晞</span></Link></span>
                 {
                     ok && (!isMobile ? (
                         <NormalNav links={links} />

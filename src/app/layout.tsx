@@ -1,9 +1,9 @@
 import '@/app/globals.css'
 import type { Metadata } from 'next'
-import { Inter, Righteous } from 'next/font/google'
+import { Inter, Righteous, Playfair_Display } from 'next/font/google'
 import {Providers} from '@/app/providers'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Playfair_Display({ subsets: ['latin'], weight: '400' })
 
 export const metadata: Metadata = {
 	title: 'Equinoia',
