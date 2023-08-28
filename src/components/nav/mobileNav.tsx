@@ -1,6 +1,6 @@
 'use client';
 
-import { LinkObject } from "@/lib/nav";
+import { LinkObject, MobileDropdownLinks, MobileLink, isString } from "@/lib/nav";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -47,14 +47,12 @@ export default function ({ links, setShouldShow }: { links: LinkObject[], setSho
                             </motion.button>
                         </div>
                         <motion.div className="flex justify-center items-center flex-col">
-                            {links.map(v => (
-                                <motion.div key={v[1]} animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4 } }} transition={{ duration: 0.2 }} exit={{ scale: [1, 0] }}>
-                                    <Link href={v[1]} className={"flex items-center justify-center m-4 lg:my-8 " + ((pathname === v[1]) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
-                                        {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
-                                        <span className="text-3xl lg:text-5xl text-rice-dark dark:text-white">{v[0]}</span>
-                                    </Link>
-                                </motion.div>
-                            ))}
+                            {links.map(v => {
+                                if (isString(v.content)) {
+                                    return <MobileLink activeHandler={activeHandler} link={v} pathname={pathname} />
+                                }
+                                return <MobileDropdownLinks activeHandler={activeHandler} link={v} pathname={pathname} />
+                            })}
                         </motion.div>
                     </motion.div>
                 }
