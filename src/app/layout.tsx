@@ -2,6 +2,7 @@ import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { Inter, Righteous, Playfair_Display } from 'next/font/google'
 import {Providers} from '@/app/providers'
+import { useTheme } from 'next-themes'
 
 const inter = Playfair_Display({ subsets: ['latin'], weight: '400' })
 

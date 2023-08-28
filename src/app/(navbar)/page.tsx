@@ -6,11 +6,14 @@ import { motion } from 'framer-motion';
 import { PopupContext, PopupView } from '@/lib/usePopup';
 import { useContext, useEffect } from 'react';
 import { Satisfy, Permanent_Marker } from 'next/font/google'
+import { useTheme } from 'next-themes';
 
 config.autoAddCss = false
 const permanentMaker = Permanent_Marker({weight: '400', subsets: ['latin']})
 
 export default function Home() {
+    const { setTheme } = useTheme()
+	setTheme('light')
     const [popupList, setPopupList] = useContext(PopupContext)
     useEffect(() => {
         //setPopupList([{ content: 'testing', duration: 0, title: 'hello world' }, ...popupList])

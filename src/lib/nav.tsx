@@ -1,5 +1,5 @@
 'use client'
-import { faCaretDown, faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faCaretDown, faCaretUp, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
 import Link from "next/link"
@@ -17,28 +17,32 @@ export function isString(content: any): content is string {
 export function NormalDropdownLinks({ links, pathname }: { links: LinkObject, pathname: string }) {
     const [opened, setOpen] = useState(false)
     const [arrowRef, animate] = useAnimate()
+    const clickHandler = () => {
+        setOpen(!opened)
+        if (opened) {
+            animate(arrowRef.current, { rotate: ['0.5turn', '0turn'] })
+            return
+        }
+        animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
+    }
     if (isString(links.content)) return
-    console.log(links)
+
     return (
-        <div>
-            <div className="mx-2 flex items-center justify-center" onClick={() => {
-                setOpen(!opened)
-                if (opened) {
-                    animate(arrowRef.current, { rotate: ['0.5turn', '0turn'] })
-                    return
-                }
-                animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
-            }}>
+        <div className="flex flex-col items-center">
+            <button className="mx-2 flex items-center justify-center" onClick={clickHandler}>
                 <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
                 <span className="lg:text-2xl text-xl selection:bg-none hover:cursor-pointer hover:text-blue-500 ">{links.title}</span>
-            </div>
+            </button>
             <AnimatePresence>
                 {
-                    opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} className="absolute top-10 flex flex-col origin-top items-center justify-center">
+                    opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} className="absolute top-20 flex flex-col origin-top items-center justify-center">
                         {/* <div className="overflow-hidden z-[200]">
                             <div className="h-2 w-2 bg-rice transform rotate-45 origin-bottom-left border border-rice-content"></div>
                         </div> */}
                         <div className="flex flex-col p-2 w-max h-max z-[120] bg-rice border border-rice-content backdrop-blur-lg rounded-xl gap-2 justify-center items-center">
+                            <button title="Back" onClick={clickHandler}>
+                                <FontAwesomeIcon icon={faCaretUp} />
+                            </button>
                             {
                                 links.content.map(v => {
                                     if (isString(v.content)) {
