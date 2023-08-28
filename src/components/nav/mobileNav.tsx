@@ -1,5 +1,6 @@
 'use client';
 
+import { LinkObject } from "@/lib/nav";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,7 +10,7 @@ import { usePathname } from "next/navigation";
 import React, { Dispatch, SetStateAction, useEffect } from "react";
 import { useState } from "react";
 
-export default function ({ links, setShouldShow }: { links: string[][], setShouldShow: Dispatch<SetStateAction<boolean>> }) {
+export default function ({ links, setShouldShow }: { links: LinkObject[], setShouldShow: Dispatch<SetStateAction<boolean>> }) {
     const pathname = usePathname()
     let [active, setActive] = useState(false)
 

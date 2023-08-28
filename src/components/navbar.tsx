@@ -6,6 +6,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import Banner from "./banner";
 import { AnimatePresence, motion, useAnimate } from "framer-motion";
 import { LinkObject } from "@/lib/nav";
+import Link from "next/link";
 
 
 const righteous = Righteous({ weight: '400', subsets: ['latin'] })
@@ -63,7 +64,7 @@ export default function () {
         }
     }, [])
 
-    const links: LinkObject[] = [{title: 'Home', content: '/'}, {}] 
+    const links: LinkObject[] = [{title: 'Home', content: '/'}, {title: 'About Us', content: '/about'}, {title: 'Election Platform', content: [{title: 'Internal Activities', content: '/internal'}, {title: 'External Activites', content: '/external'}, {title: 'Welfare', content: '/welfare'}, {title: 'Policies', content: '/policy'}]}]
 
     return (
         <div className="sticky top-0 w-screen z-50 origin-top" ref={r}>
