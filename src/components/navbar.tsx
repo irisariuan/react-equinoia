@@ -5,8 +5,9 @@ import MobileNav from "./nav/mobileNav";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Banner from "./banner";
 import { AnimatePresence, motion, useAnimate } from "framer-motion";
-import { LinkObject } from "@/lib/nav";
+import { LinkObject } from "@/lib/nav/nav";
 import Link from "next/link";
+import { navList } from "@/lib/nav/navList";
 
 
 const righteous = Righteous({ weight: '400', subsets: ['latin'] })
@@ -64,9 +65,6 @@ export default function () {
         }
     }, [])
 
-    const links: LinkObject[] = [{title: 'Home', content: '/'}, {title: 'About Us', content: '/about'}, {title: 'Election Platform', content: [
-        {title: 'Internal Activities', content: '/internal'}, {title: 'External Activites', content: '/external'}, {title: 'Welfare', content: '/welfare'}, {title: 'Policies', content: '/policy'}, {title: 'testing', content: [{title: 'hello', content: ''}]}]
-        }, {title: 'Supporting Schools', content: '/support'}, {title: 'Photos', content: '/photo'}]
 
     return (
         <div className="sticky top-0 w-screen z-50 origin-top" ref={r}>
@@ -75,9 +73,9 @@ export default function () {
                 <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 "}>MCKLN | <Link href="/">Equinoia <span className={chinese.className}>凝晞</span></Link></span>
                 {
                     ok && (!isMobile ? (
-                        <NormalNav links={links} />
+                        <NormalNav links={navList} />
                     ) : (
-                        <MobileNav links={links} setShouldShow={setShouldShow} />
+                        <MobileNav links={navList} setShouldShow={setShouldShow} />
                     ))
                 }
             </div>

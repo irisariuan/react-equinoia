@@ -59,13 +59,13 @@ export function NormalDropdownLinks({ links, pathname }: { links: LinkObject, pa
     )
 }
 
-export function MobileDropdownLinks({ link, pathname, activeHandler }: { link: LinkObject, pathname: string, activeHandler: () => void }) {
+export function MobileDropdownLinks({ link, pathname, activeHandler, subLink = false }: { link: LinkObject, pathname: string, activeHandler: () => void, subLink?: boolean }) {
     if (isString(link.content)) return
     const [opened, setOpen] = useState(false)
     const [arrowRef, animate] = useAnimate()
 
     return (
-        <div>
+        <motion.div exit={{ scale: [1, 0] }} animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4 } }}>
             <div className="flex justify-center items-center" onClick={() => {
                 setOpen(!opened)
                 if (opened) {
@@ -75,20 +75,22 @@ export function MobileDropdownLinks({ link, pathname, activeHandler }: { link: L
                 animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
             }}>
                 <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
-                <span className="text-3xl lg:text-5xl text-rice-dark dark:text-white">{link.title}</span>
+                <span className={subLink ? 'text-2xl lg:text-3xl font-semibold' : 'text-3xl lg:text-5xl' + " text-rice-dark dark:text-white"}>{link.title}</span>
             </div>
             <div>
-                {opened &&
-                    <motion.div animate={{ scaleY: [0, 1] }} className="origin-top">
-                        {link.content.map(v => {
-                            if (isString(v.content)) {
-                                return <MobileLink link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} />
-                            }
-                            return <MobileDropdownLinks link={v} pathname={pathname} activeHandler={activeHandler} />
-                        })}
-                    </motion.div>}
+                <AnimatePresence>
+                    {opened &&
+                        <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0], height: [null, 0] }} className="origin-top">
+                            {link.content.map(v => {
+                                if (isString(v.content)) {
+                                    return <MobileLink link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} />
+                                }
+                                return <MobileDropdownLinks link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} />
+                            })}
+                        </motion.div>}
+                </AnimatePresence>
             </div>
-        </div>
+        </motion.div>
     )
 }
 

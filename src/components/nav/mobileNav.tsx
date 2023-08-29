@@ -1,6 +1,6 @@
 'use client';
 
-import { LinkObject, MobileDropdownLinks, MobileLink, isString } from "@/lib/nav";
+import { LinkObject, MobileDropdownLinks, MobileLink, isString } from "@/lib/nav/nav";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,11 +22,11 @@ export default function ({ links, setShouldShow }: { links: LinkObject[], setSho
         if (active) {
             animate('#navMobileBtn', { opacity: [1, 0] }, { duration: 0.3 })
             setShouldShow(true)
-            
+
             return
         }
         animate('#navMobileBtn', { opacity: [0, 1] }, { duration: 0.3 })
-        
+
         setShouldShow(false)
     }, [active])
 
