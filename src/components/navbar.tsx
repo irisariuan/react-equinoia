@@ -5,7 +5,7 @@ import MobileNav from "./nav/mobileNav";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Banner from "./banner";
 import { AnimatePresence, motion, useAnimate } from "framer-motion";
-import { LinkObject } from "@/lib/nav/nav";
+import { LinkObject } from "@/lib/nav/navlib";
 import Link from "next/link";
 import { navList } from "@/lib/nav/navList";
 

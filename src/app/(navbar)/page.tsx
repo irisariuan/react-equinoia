@@ -15,9 +15,7 @@ export default function Home() {
     const { setTheme } = useTheme()
     setTheme('light')
     const [popupList, setPopupList] = useContext(PopupContext)
-    useEffect(() => {
-        //setPopupList([{ content: 'testing', duration: 0, title: 'hello world' }, ...popupList])
-    }, [])
+    
     return (
         <main className="dark:text-white">
             <motion.div animate={{ backgroundColor: ['rgb(253, 249, 238)', 'rgb(255,255,255)'] }} transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse' }} className='bg-white h-screen w-full flex justify-center items-center flex-col'>

@@ -1,4 +1,4 @@
-import { NormalDropdownLinks, LinkObject, NormalLink, isString } from '@/lib/nav/nav'
+import { NormalDropdownLinks, LinkObject, NormalLink, isString } from '@/lib/nav/navlib'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 

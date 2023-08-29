@@ -1,6 +1,6 @@
 'use client';
 
-import { LinkObject, MobileDropdownLinks, MobileLink, isString } from "@/lib/nav/nav";
+import { LinkObject, MobileDropdownLinks, MobileLink, isString } from "@/lib/nav/navlib";
 import { faCircleXmark } from "@fortawesome/free-regular-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

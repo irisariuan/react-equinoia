@@ -1,4 +1,4 @@
-import { LinkObject } from "./nav";
+import { LinkObject } from "./navlib";
 
 export const navList: LinkObject[] = [
     { title: "Home", content: "/" },
