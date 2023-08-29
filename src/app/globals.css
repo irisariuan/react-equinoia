@@ -16,7 +16,7 @@
 }
 
 @layer utilities {
-	.scrollbar::-webkit-scrollbar {
+	/* .scrollbar::-webkit-scrollbar {
 		width: 10px;
 	}
 
@@ -33,5 +33,5 @@
 
 	.scrollbar::-webkit-scrollbar-thumb:hover {
 		background: #c0aba0;
-	}
+	} */
 }
