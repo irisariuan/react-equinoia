@@ -111,7 +111,7 @@ export function MobileLink({ link, pathname, activeHandler, subLink = false, del
     if (!isString(link.content)) { return }
     if (subLink) {
         return (
-            <motion.div animate={{ opacity: [0, 1], scale: [0, 1], transition: { duration: 0.2, delay: delay * 0.05 } }}>
+            <motion.div animate={{ opacity: [0, 1], scaleY: [0, 1], transition: { duration: 0.15, delay: delay * 0.12, ease: 'easeIn' } }} initial={{transformOrigin: 'bottom'}}>
                 <Link href={link.content} className={"flex items-center justify-center m-4 lg:my-8 " + ((pathname === link.content) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
                     {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
                     <span className={subLink ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-5xl' + " text-gold-400 dark:text-white"}>{link.title}</span>

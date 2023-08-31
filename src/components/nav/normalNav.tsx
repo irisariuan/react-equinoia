@@ -8,11 +8,11 @@ export default function ({ links }: { links: LinkObject[] }) {
     return (
         <div className="flex flex-wrap content-center items-center justify-center">
             <div className="m-0 flex flex-wrap">
-                {links.map(v => {
+                {links.map((v, i) => {
                     if (isString(v.content)) {
-                        return (<NormalLink link={v} pathname={pathname} />)
+                        return (<NormalLink key={i} link={v} pathname={pathname} />)
                     }
-                    return <NormalDropdownLinks links={v} pathname={pathname} />
+                    return <NormalDropdownLinks key={i} links={v} pathname={pathname} />
                 }
                 )}
             </div>
