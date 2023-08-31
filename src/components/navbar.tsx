@@ -8,6 +8,7 @@ import { AnimatePresence, motion, useAnimate } from "framer-motion";
 import { LinkObject } from "@/lib/nav/navlib";
 import Link from "next/link";
 import { navList } from "@/lib/nav/navList";
+import Image from "next/image";
 
 
 const righteous = Righteous({ weight: '400', subsets: ['latin'] })
@@ -65,11 +66,10 @@ export default function () {
         }
     }, [])
 
-
     return (
         <div className="sticky top-0 w-screen z-50 origin-top" ref={r}>
             <div className="z-50 flex bg-nav/80 dark:bg-nav-dark/80 flex-wrap gap-2 p-2 lg:p-5 m-0 w-screen items-center dark:text-white backdrop-blur-md border-b border-rice-content/50 dark:border-white/50 ">
-                <img src="school_icon.png" alt="" className="h-10 w-10 lg:h-12 lg:w-12" />
+                <Image src="/school_icon.png" alt="" width={40} height={40} loading="lazy"  className="lg:h-12 lg:w-12" />
                 <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 "}>MCKLN | <Link href="/">Equinoia <span className={chinese.className}>凝晞</span></Link></span>
                 {
                     ok && (!isMobile ? (
