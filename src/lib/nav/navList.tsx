@@ -6,12 +6,12 @@ export const navList: LinkObject[] = [
     {
         title: "Election Platform",
         content: [
-            { title: "Internal Activities", content: "/internal" },
-            { title: "External Activites", content: "/external" },
-            { title: "Welfare", content: "/welfare" },
-            { title: "Policies", content: "/policy" },
+            { title: "Internal Activities", content: "/election/internal" },
+            { title: "External Activites", content: "/election/external" },
+            { title: "Welfare", content: "/election/welfare" },
+            { title: "Policies", content: "/election/policy" },
         ],
     },
-    { title: "Supporting Schools", content: "/support" },
+    { title: "Supporting Schools", content: "/supportSchools" },
     { title: "Photos", content: "/photo" },
 ]

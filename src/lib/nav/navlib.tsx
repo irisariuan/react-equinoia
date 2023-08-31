@@ -14,6 +14,19 @@ export function isString(content: any): content is string {
     return typeof content === 'string' || content instanceof String
 }
 
+function isSublink(links: LinkObject[], pathname: string): boolean {
+    for (const link of links) {
+        if (isString(link.content)) {
+            if (link.content === pathname) {
+                return true
+            }
+        } else {
+            isSublink(link.content, pathname)
+        }
+    }
+    return false
+}
+
 export function NormalDropdownLinks({ links, pathname }: { links: LinkObject, pathname: string }) {
     const [opened, setOpen] = useState(false)
     const [arrowRef, animate] = useAnimate()
@@ -26,7 +39,7 @@ export function NormalDropdownLinks({ links, pathname }: { links: LinkObject, pa
         animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
     }
     if (isString(links.content)) return
-
+    
     return (
         <div className="flex flex-col items-center">
             <button className="mx-2 flex items-center justify-center" onClick={clickHandler}>
@@ -39,10 +52,10 @@ export function NormalDropdownLinks({ links, pathname }: { links: LinkObject, pa
                         {/* <div className="overflow-hidden z-[200]">
                             <div className="h-2 w-2 bg-rice transform rotate-45 origin-bottom-left border border-rice-content"></div>
                         </div> */}
-                        <div className="flex flex-col p-2 w-max h-max z-[120] bg-rice border border-rice-content backdrop-blur-lg rounded-xl gap-2 justify-center items-center">
-                            <button title="Back" onClick={clickHandler}>
+                        <div className="flex flex-col p-2 w-max h-max z-[200] bg-rice border border-rice-content rounded-xl gap-2 justify-center items-center">
+                            <motion.button animate={{rotate: ['0.5turn', '0turn']}} title="Back" onClick={clickHandler}>
                                 <FontAwesomeIcon icon={faCaretUp} />
-                            </button>
+                            </motion.button>
                             {
                                 links.content.map(v => {
                                     if (isString(v.content)) {
@@ -65,7 +78,7 @@ export function MobileDropdownLinks({ link, pathname, activeHandler, subLink = f
     const [arrowRef, animate] = useAnimate()
 
     return (
-        <motion.div exit={{ scale: [1, 0] }} animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4 } }}>
+        <motion.div exit={{ scale: [1, 0] }} animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4 } }} className="m-4 lg:my-8">
             <div className="flex justify-center items-center" onClick={() => {
                 setOpen(!opened)
                 if (opened) {
@@ -75,7 +88,7 @@ export function MobileDropdownLinks({ link, pathname, activeHandler, subLink = f
                 animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
             }}>
                 <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
-                <span className={subLink ? 'text-2xl lg:text-3xl font-semibold' : 'text-3xl lg:text-5xl' + " text-rice-dark dark:text-white"}>{link.title}</span>
+                <span className={subLink ? 'text-2xl lg:text-3xl font-semibold' : 'text-3xl lg:text-5xl'+ ((!opened && isSublink(link.content, pathname)) ? ' font-bold' : '') + " text-rice-dark dark:text-white"}>{link.title}</span>
             </div>
             <div>
                 <AnimatePresence>
