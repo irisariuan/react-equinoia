@@ -49,9 +49,9 @@ export default function ({ links, setShouldShow }: { links: LinkObject[], setSho
                         <motion.div className="flex justify-center items-center flex-col">
                             {links.map((v, i) => {
                                 if (isString(v.content)) {
-                                    return <MobileLink activeHandler={activeHandler} link={v} pathname={pathname} delay={i} />
+                                    return <MobileLink key={i} activeHandler={activeHandler} link={v} pathname={pathname} delay={i} />
                                 }
-                                return <MobileDropdownLinks activeHandler={activeHandler} link={v} pathname={pathname} delay={i} />
+                                return <MobileDropdownLinks key={i} activeHandler={activeHandler} link={v} pathname={pathname} delay={i} />
                             })}
                         </motion.div>
                     </motion.div>
