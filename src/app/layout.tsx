@@ -1,8 +1,7 @@
 import '@/app/globals.css'
 import type { Metadata } from 'next'
-import { Inter, Righteous, Playfair_Display } from 'next/font/google'
-import {Providers} from '@/app/providers'
-import { useTheme } from 'next-themes'
+import { Playfair_Display } from 'next/font/google'
+import { Providers } from '@/app/providers'
 
 const inter = Playfair_Display({ subsets: ['latin'], weight: '400' })
 
@@ -17,7 +16,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en" className='bg-rice'>
+		<html lang="en">
 			<meta name='theme-color' content='#fdf9ee' />
 			<body className={inter.className + ' transition-all m-0 p-0 w-screen overflow-x-hidden'}>
 				<Providers>
