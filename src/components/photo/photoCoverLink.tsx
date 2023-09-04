@@ -8,7 +8,6 @@ export default async function ({ src, title, target }: { src: string, title: str
     return (
         <div className="flex justify-center items-center flex-col w-4/5 overflow-hidden bg-rice-content rounded-lg">
             <div className="w-full h-32 md:h-64 lg:h-96 rounded-lg rounded-b-2xl overflow-hidden relative top-0 transition-all flex flex-col justify-center items-center">
-                <span className="relative top-0 z-50 text-white text-2xl lg:text-6xl">{title}</span>
                 <PhotoBlurred src={src} title={title} />
             </div>
             <Link href={'/photo/'+target} className="w-full">

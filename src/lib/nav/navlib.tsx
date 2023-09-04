@@ -27,51 +27,6 @@ function isSublink(links: LinkObject[], pathname: string): boolean {
     return false
 }
 
-export function NormalDropdownLinks({ links, pathname }: { links: LinkObject, pathname: string }) {
-    const [opened, setOpen] = useState(false)
-    const [arrowRef, animate] = useAnimate()
-    const clickHandler = () => {
-        setOpen(!opened)
-        if (opened) {
-            animate(arrowRef.current, { rotate: ['0.5turn', '0turn'] })
-            return
-        }
-        animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
-    }
-    if (isString(links.content)) return
-
-    return (
-        <div className="flex flex-col items-center">
-            <button className="mx-2 flex items-center justify-center" onClick={clickHandler}>
-                <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
-                <span className="lg:text-2xl text-xl selection:bg-none hover:cursor-pointer hover:text-blue-500 ">{links.title}</span>
-            </button>
-            <AnimatePresence>
-                {
-                    opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} className="absolute top-20 flex flex-col origin-top items-center justify-center">
-                        {/* <div className="overflow-hidden z-[200]">
-                            <div className="h-2 w-2 bg-rice transform rotate-45 origin-bottom-left border border-rice-content"></div>
-                        </div> */}
-                        <div className="flex flex-col p-2 w-max h-max z-[200] bg-rice border border-rice-content rounded-xl gap-2 justify-center items-center">
-                            <motion.button animate={{ rotate: ['0.5turn', '0turn'] }} title="Back" onClick={clickHandler}>
-                                <FontAwesomeIcon icon={faCaretUp} />
-                            </motion.button>
-                            {
-                                links.content.map(v => {
-                                    if (isString(v.content)) {
-                                        return (<NormalLink link={v} pathname={pathname} />)
-                                    }
-                                    return <NormalDropdownLinks links={v} pathname={pathname} />
-                                })
-                            }
-                        </div>
-                    </motion.div>
-                }
-            </AnimatePresence>
-        </div>
-    )
-}
-
 export function MobileDropdownLinks({ link, pathname, activeHandler, subLink = false, delay = 0 }: { link: LinkObject, pathname: string, activeHandler: () => void, subLink?: boolean, delay?: number }) {
     if (isString(link.content)) return
     const [opened, setOpen] = useState(false)
@@ -111,7 +66,7 @@ export function MobileLink({ link, pathname, activeHandler, subLink = false, del
     if (!isString(link.content)) { return }
     if (subLink) {
         return (
-            <motion.div animate={{ opacity: [0, 1], scaleY: [0, 1], transition: { duration: 0.15, delay: delay * 0.12, ease: 'easeIn' } }} initial={{transformOrigin: 'bottom'}}>
+            <motion.div animate={{ opacity: [0, 1], scaleY: [0, 1], transition: { duration: 0.15, delay: delay * 0.12, ease: 'easeIn' } }} initial={{ transformOrigin: 'bottom' }}>
                 <Link href={link.content} className={"flex items-center justify-center m-4 lg:my-8 " + ((pathname === link.content) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
                     {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
                     <span className={subLink ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-5xl' + " text-gold-400 dark:text-white"}>{link.title}</span>
@@ -129,7 +84,55 @@ export function MobileLink({ link, pathname, activeHandler, subLink = false, del
     )
 }
 
-export function NormalLink({ link, pathname }: { link: LinkObject, pathname: string }) {
+export function NormalDropdownLinks({ links, pathname, customHandler }: { links: LinkObject, pathname: string, customHandler?: () => void }) {
+    const [opened, setOpen] = useState(false)
+    const [arrowRef, animate] = useAnimate()
+    const clickHandler = () => {
+        if (customHandler !== undefined) {
+            customHandler()
+        }
+        setOpen(!opened)
+        if (opened) {
+            animate(arrowRef.current, { rotate: ['0.5turn', '0turn'] })
+            return
+        }
+        animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
+    }
+    if (isString(links.content)) return
+
+    return (
+        <div className="flex flex-col items-center">
+            <button className="mx-2 flex items-center justify-center" onClick={clickHandler}>
+                <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
+                <span className="lg:text-2xl text-xl selection:bg-none hover:cursor-pointer hover:text-blue-500 ">{links.title}</span>
+            </button>
+            <AnimatePresence>
+                {
+                    opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} className="absolute top-20 flex flex-col origin-top items-center justify-center">
+                        {/* <div className="overflow-hidden z-[200]">
+                            <div className="h-2 w-2 bg-rice transform rotate-45 origin-bottom-left border border-rice-content"></div>
+                        </div> */}
+                        <div className="flex flex-col p-2 w-max h-max z-[200] bg-rice border border-rice-content rounded-xl gap-2 justify-center items-center">
+                            <motion.button animate={{ rotate: ['0.5turn', '0turn'] }} title="Back" onClick={clickHandler} className="h-full">
+                                <FontAwesomeIcon icon={faCaretUp} />
+                            </motion.button>
+                            {
+                                links.content.map(v => {
+                                    if (isString(v.content)) {
+                                        return (<NormalLink link={v} pathname={pathname} customHandler={() => {setOpen(false)}} />)
+                                    }
+                                    return <NormalDropdownLinks links={v} pathname={pathname} customHandler={() => {setOpen(false)}} />
+                                })
+                            }
+                        </div>
+                    </motion.div>
+                }
+            </AnimatePresence>
+        </div>
+    )
+}
+
+export function NormalLink({ link, pathname, customHandler }: { link: LinkObject, pathname: string, customHandler?: () => void }) {
     if (!isString(link.content)) { return }
-    return (<Link href={link.content} key={link.content} className={"mx-2 text-xl lg:text-2xl " + ((link.content === pathname) ? 'font-semibold ' : 'hover:text-blue-500 ')} >{link.title}</Link>)
+    return (<Link href={link.content} key={link.content} className={"mx-2 text-xl lg:text-2xl " + ((link.content === pathname) ? 'font-semibold ' : 'hover:text-blue-500 ')} onClick={customHandler} >{link.title}</Link>)
 }
