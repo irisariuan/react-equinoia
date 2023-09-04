@@ -11,31 +11,27 @@ export default function () {
         <div>
             <Box>
                 <ParagraphTitle>Supporting Schools</ParagraphTitle>
-                <ListView>
-                    {
-                        supportingSchools.map((v, i) => {
-                            return (
-                                <div className="my-1">
+                    <ListView>
+                        {
+                            supportingSchools.map((v, i) => {
+                                return (
                                     <ListItem key={i}>
-                                        <Box flexDirection="row">
-                                            <Label>
-                                                {v.schoolName}
-                                            </Label>
-                                            {(v.cabinetName !== 'UNKNOWN') && (
-                                                <Box flexDirection="row" key={i}>
-                                                    <div className="mx-2 w-px h-4 bg-rice-content" />
-                                                    <Label>
-                                                        {v.cabinetName}
-                                                    </Label>
-                                                </Box>
-                                            )}
-                                        </Box>
+                                        <Label>
+                                            {v.schoolName}
+                                        </Label>
+                                        {(v.cabinetName !== 'UNKNOWN') && (
+                                            <div className="inline-block">
+                                                <div className="mx-2 w-px h-4 bg-rice-content inline-block" />
+                                                <Label>
+                                                    {v.cabinetName}
+                                                </Label>
+                                            </div>
+                                        )}
                                     </ListItem>
-                                </div>
-                            )
-                        })
-                    }
-                </ListView>
+                                )
+                            })
+                        }
+                    </ListView>
             </Box>
         </div>
     )

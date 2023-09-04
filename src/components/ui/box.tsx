@@ -1,6 +1,6 @@
-export function Box({children, flexDirection = 'col'} : {children: React.ReactNode, flexDirection?: 'col' | 'row'}) {
+export function Box({ children, flexDirection = 'col', itemsAlign = 'center' }: { children: React.ReactNode, flexDirection?: 'col' | 'row', itemsAlign?: 'center' | 'left' | 'right' }) {
     return (
-        <div className={'flex-' + flexDirection + " flex justify-center items-center"}>
+        <div className={'flex-' + flexDirection + " flex justify-" + itemsAlign + " items-" + itemsAlign}>
             {children}
         </div>
     )
