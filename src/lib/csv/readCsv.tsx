@@ -1,16 +1,22 @@
 import { PathLike, readFileSync } from "fs";
 
-interface School {
-    schoolName: string,
-    cabinetName: string
+export interface School {
+    schoolName: {
+        chineseName: string,
+        englishName: string,
+    },
+    cabinetName: string,
+    instagramName: string
 }
-export function readCsv(filename: string): School[] {
-    return readFileSync(filename, {encoding: 'utf-8'}).replaceAll('\n', ',').replaceAll('\r', '').split(',').reduce((old: string[][], n) => {
+export function readCsv(filename: string, splitPoint = 4): School[] | undefined {
+    return readFileSync(filename, { encoding: 'utf-8' }).replaceAll('\n', ',').replaceAll('\r', '').match(/([^\\\][^,]|\\,)+/g)?.reduce((old: string[][], n) => {
         let o = old
         o[o.length - 1].push(n)
-        if (o[o.length - 1].length >= 2) {
+        if (o[o.length - 1].length >= splitPoint) {
             o.push([])
         }
         return o
-    }, [[]]).map(([schoolName, cabinetName]): School => {return {schoolName, cabinetName}}).slice(0, -1)
+    }, [[]]).map(([englishName, chineseName, cabinetName, instagramName]): School => {
+        return { schoolName: { englishName, chineseName }, cabinetName, instagramName }
+    }).slice(0, -1)
 }

@@ -1,5 +1,5 @@
-export function ParagraphContent({children}: {children: React.ReactNode}) {
+export function ParagraphContent({children, marginY = 0}: {children: React.ReactNode, marginY?: number}) {
     return (
-        <span className="text-lg lg:text-xl">{children}</span>
+        <p className={"text-lg lg:text-xl my-" + marginY}>{children}</p>
     )
 }
