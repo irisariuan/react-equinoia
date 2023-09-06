@@ -6,10 +6,20 @@ import Link from "next/link"
 import { Label } from "@/components/ui/label"
 import { School } from "@/lib/csv/readCsv"
 import { ListItem } from "@/components/ui/list"
+import { useSize } from "@/lib/useSize"
+
+export function SchoolListItem({school} : {school: School}) {
+    const isMobile = useSize()
+    return (isMobile ? (<MobileListItem school={school} />) : (<DesktopListItem school={school} />))
+        
+}
 
 export function MobileListItem({ school }: {school: School}) {
-    return (<>
-    </>)
+    return (
+    <div className="">
+    
+    </div>
+    )
 }
 
 export function DesktopListItem({ school }: { school: School }) {
