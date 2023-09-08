@@ -26,7 +26,7 @@ export default async function () {
                     All in all, as the combination of “equinox” and “eunoia”, we, Equinoia, aim to be a good association. Embodying friendliness and goodwill, It is our earnest hope to lead all the MCers to embark on a new journey, providing them a unique experience and new opportunities in the year ahead.
                 </ParagraphContent>
             </div>
-            <div>
+            <div className="w-4/5 mt-4">
                 <Box>
                     <ParagraphTitle>What is Equinoia</ParagraphTitle>
                 </Box>

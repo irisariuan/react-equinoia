@@ -134,5 +134,5 @@ export function NormalDropdownLinks({ links, pathname, customHandler }: { links:
 
 export function NormalLink({ link, pathname, customHandler }: { link: LinkObject, pathname: string, customHandler?: () => void }) {
     if (!isString(link.content)) { return }
-    return (<Link href={link.content} key={link.content} className={"mx-2 text-xl lg:text-2xl " + ((link.content === pathname) ? 'font-semibold ' : 'hover:text-blue-500 ')} onClick={customHandler} >{link.title}</Link>)
+    return (<Link href={link.content} key={link.content} className={"mx-2 text-xl lg:text-2xl " + ((link.content === pathname) ? 'font-bold ' : 'hover:text-blue-500 ')} onClick={customHandler} >{link.title}</Link>)
 }
