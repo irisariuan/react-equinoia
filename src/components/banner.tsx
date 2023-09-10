@@ -30,7 +30,7 @@ export default function() {
         <AnimatePresence>
         {ad && <motion.div className="flex bg-nav/80 dark:bg-nav-dark/80 border-b border-rice-content/50 dark:border-white/50 backdrop-blur-lg -z-10 w-screen sticky p-3 items-center" exit={{opacity: [1, 0]}}>
             <div className="flex-1 mx-2">
-                <p className="leading-tight p-0 m-0">Welcome to the official page of Equinoia</p>
+                <p className="leading-tight p-0 m-0 sm:text-lg">Welcome to the official page of proposed students‘union candidate cabinet No.1 Equinoia</p>
                 <span className="text-sm">Vote us in Sep 29!</span>
             </div>
             <button className="" onClick={() => { setAd(false) }} title="Close">

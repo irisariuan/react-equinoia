@@ -4,7 +4,6 @@ import Link from "next/link";
 export default function() {
     return (
         <div className="h-screen flex flex-col">
-            <Navbar />
             <div className="flex flex-1 justify-center content-center items-center">
                 <div className="text-center flex items-center justify-center flex-col">
                 <img src="/icon.jpg" alt="Icon of Equinoia" className="w-1/4 z-0 rounded-full" />
