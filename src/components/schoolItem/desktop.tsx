@@ -1,4 +1,4 @@
-import { School } from "@/lib/csv/readCsv";
+import { School } from "@/lib/read/readCsv";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

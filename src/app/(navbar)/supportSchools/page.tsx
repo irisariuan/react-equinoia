@@ -1,7 +1,7 @@
 import { Box } from "@/components/ui/box";
 import { ListView } from "@/components/ui/list";
 import { ParagraphTitle } from "@/components/ui/paragraph/title";
-import { readCsv } from "@/lib/csv/readCsv";
+import { readCsv } from "@/lib/read/readCsv";
 import { NextResponse } from "next/server";
 import { SchoolListItem } from '@/components/schoolListItem'
 

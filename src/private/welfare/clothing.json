@@ -1,0 +1,242 @@
+{
+    "store": [
+        {
+            "name": "Dickies",
+            "caution": [],
+            "description": [
+                "出示學生證去任何一間專門店可即時加入會員，可享有單件九折優惠"
+            ],
+            "location": [
+                "LCX分店 尖沙嘴海運大廈三階LCX 28-9號舖",
+                "荃新天地分店 荃灣荃新天地1期UG48號",
+                "屯門市廣場分店 屯門屯門市廣場1期3樓3276號舖",
+                "東薈城Outlet 東涌東薈城地下G01E號舖"
+            ],
+            "isOnline": false,
+            "igName": "dickies_hongkong",
+            "link": "linktr.ee/Dickies_hongkong"
+        },
+        {
+            "name": "Everythreeday 每三日",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [
+                "觀塘駿業里6號富利工業大廈2樓B7室"
+            ],
+            "isOnline": false,
+            "igName": "everythreeday",
+            "link": "everythreeday.store"
+        },
+        {
+            "name": "Life Sports Ltd",
+            "caution": [
+                "不可與其他優惠同時使用"
+            ],
+            "description": [
+                "網店購物出示學生證買滿$1000可減$50，買滿$500可減$20",
+                "門市購物需follow IG以及提供學校和內閣名稱，便可享有買滿$1000可減$50，買滿$500可減$20的優惠"
+            ],
+            "location": [
+                "旺角通菜街威達商業大廈12樓08-09室"
+            ],
+            "isOnline": false,
+            "igName": "lifesportsh.k"
+        },
+        {
+            "name": "lookrightt",
+            "caution": [
+                "優惠品除外"
+            ],
+            "description": [
+                "出示學生證及follow IG可享門市現貨九五折優惠"
+            ],
+            "location": [
+                "旺角西洋菜南街5號好望角大廈20樓07室"
+            ],
+            "isOnline": false,
+            "igName": "lookrightt",
+            "link": "www.lookrightt.com no"
+        },
+        {
+            "name": "Offroad",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九五折優惠"
+            ],
+            "location": [
+                "荔枝角青山道688-690嘉名工廠大廈B座10樓B室（The Space Room1023)"
+            ],
+            "isOnline": false,
+            "igName": "mount.offroad"
+        },
+        {
+            "name": "Um12",
+            "caution": [],
+            "description": [
+                "出示學生證正價貨品可享有九五折優惠"
+            ],
+            "location": [
+                "旺角好景商業中心14樓1411A"
+            ],
+            "isOnline": false,
+            "igName": "um12store",
+            "link": "www.um12store.com"
+        },
+        {
+            "name": "Untouched United",
+            "caution": [
+                "只限門市使用",
+                "只適用Untouched品牌產品，不包括部份限量或獨立系列產品",
+                "只可使用現金"
+            ],
+            "description": [
+                "出示學生證正價貨品可享有八折優惠"
+            ],
+            "location": [
+                "旺角西洋菜南街好望角大廈1105室"
+            ],
+            "isOnline": false,
+            "igName": "untouchedunited"
+        },
+        {
+            "name": "BLKLST852",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [
+                "葵涌打磚坪街68號和豐工業中心1924A"
+            ],
+            "isOnline": false,
+            "igName": "blacklist.852",
+            "link": "http://www.blacklist852.com"
+        },
+        {
+            "name": "Crazt.co",
+            "caution": [],
+            "description": [
+                "出示學生證門市購物可享有九五折優惠"
+            ],
+            "location": [
+                "觀塘興業街15號中美中心A座9樓A1室"
+            ],
+            "isOnline": false,
+            "igName": "crazt.co",
+            "link": "crazt.co"
+        },
+        {
+            "name": "Mode Marie",
+            "caution": [],
+            "description": [
+                "出示學生證門市購物可享有八折優惠"
+            ],
+            "location": [
+                "彌敦道216-288號恆豐中心2B層22號舖"
+            ],
+            "isOnline": false,
+            "igName": "modemarie_hk",
+            "link": "https://www.modemarie.com.hk/"
+        },
+        {
+            "name": "179cm.korea",
+            "caution": [],
+            "description": [
+                "出示學生證買滿二件貨品可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "179cm.korea",
+            "link": "https://179cmstyle.com"
+        },
+        {
+            "name": "852hey",
+            "caution": [],
+            "description": [
+                "出示學生證買滿二件可享有九折優惠",
+                "買滿三件可享有八五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "852hey"
+        },
+        {
+            "name": "MIMIMI SHOP",
+            "caution": [
+                "不包括襪及連線貨品"
+            ],
+            "description": [
+                "出示學生證及follow IG正價貨品可享有單件九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "mimimi_shop"
+        },
+        {
+            "name": "ONLYBLACKHK",
+            "caution": [],
+            "description": [
+                "出示學生證及follow IG可享有九五折"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "onlyblackhk",
+            "link": "https://onlyblackhk.com"
+        },
+        {
+            "name": "shopping_santa_",
+            "caution": [
+                "公價貨品除外"
+            ],
+            "description": [
+                "出示學生證可享有全店九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "shopping_santa_",
+            "link": "https://www.instead.com.hk/shop/shopping_santa_"
+        },
+        {
+            "name": "amsly.hk",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "amsly.hk",
+            "link": "https://www.amslyhk.com/"
+        },
+        {
+            "name": "Before Sunset HK",
+            "caution": [],
+            "description": [
+                "出示學生證及follow IG購買正價貨品兩件或以上可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "beforesunset.hk"
+        },
+        {
+            "name": "dinosaur shop",
+            "caution": [],
+            "description": [
+                "出示學生證凡買滿$199獲送一份禮品(上衣，褲，裙，首飾，精品)"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "dinosaur_shop_hk"
+        },
+        {
+            "name": "IDEALISM",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "i.dealism_outfit"
+        }
+    ]
+}

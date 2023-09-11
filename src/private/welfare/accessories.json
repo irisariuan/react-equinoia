@@ -1,0 +1,198 @@
+{
+    "store": [
+        {
+            "name": "Genic inc",
+            "caution": [],
+            "description": [
+                "出示學生證購買日本手工眼鏡框可獲七折優惠"
+            ],
+            "location": [
+                "旺角彌敦道TOP商場700號3樓307號"
+            ],
+            "isOnline": false,
+            "igName": "genic.inc"
+        },
+        {
+            "name": "Love Lens",
+            "caution": [],
+            "description": [
+                "出示學生證購買正價貨品月拋，年拋買二送一。"
+            ],
+            "location": [
+                "旺角西洋菜南街1N兆萬中心地庫2層B205舖"
+            ],
+            "isOnline": false,
+            "igName": "lovelenshk",
+            "link": "www.lovelenshk.com"
+        },
+        {
+            "name": "Optical Online Hk",
+            "caution": [],
+            "description": [
+                "出示優惠碼[OOVIP]，可享有九折優惠"
+            ],
+            "location": [
+                "九龍太子西洋菜北街155號嘉康中心12樓A室"
+            ],
+            "isOnline": false,
+            "igName": "optical.online.hk",
+            "link": "https://opticalonlinehk.com"
+        },
+        {
+            "name": "Otto_optic",
+            "caution": [],
+            "description": [
+                "出示學生證，即可免費獲得$238鏡框一副",
+                "只收鏡片錢"
+            ],
+            "location": [
+                "九龍旺角彌敦道582-592號信和中心3樓303室"
+            ],
+            "isOnline": false,
+            "igName": "otto_optic"
+        },
+        {
+            "name": "Ipoint_optical",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [
+                "灣仔店:軒尼詩道290號地下(61202031)",
+                "深水埗店：西九龍中心1樓140號C舖(61135401)"
+            ],
+            "isOnline": false,
+            "igName": "ipoint_optical"
+        },
+        {
+            "name": "Sliver beautycool",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠",
+                "包平郵"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "sliver_beautycool"
+        },
+        {
+            "name": "CENTERMETAL",
+            "caution": [
+                "該禮品在選舉結果公布後決定"
+            ],
+            "description": [
+                "出示學生證，可享有全部產品七五折。",
+                "購買金額滿$500（暫定金額）獲送一份免費禮品"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "center_metal"
+        },
+        {
+            "name": "Zakkaholic",
+            "caution": [
+                "優惠碼會在選舉結果公布後提供"
+            ],
+            "description": [
+                "出示優惠碼可享有網站手錶九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "zakkaholic_store",
+            "link": "zakkaholic.com"
+        },
+        {
+            "name": "Very berryz",
+            "caution": [
+                "不可與其他優惠同時使用"
+            ],
+            "description": [
+                "出示學生證可享有全單九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "very.berryz"
+        },
+        {
+            "name": "A LITTLE DREAMER HK",
+            "caution": [],
+            "description": [
+                "出示學生證及follow IG可享有九二折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "alittledreamer.hk",
+            "link": "alittledreamerhk.com"
+        },
+        {
+            "name": "Michelllism Accessories",
+            "caution": [
+                "購買戒指及羊毛氈系列除外"
+            ],
+            "description": [
+                "出示學生證，購物可享有八五折優惠",
+                "兩人或以上一同參加工作坊可享有八五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "michelllism.accessories"
+        },
+        {
+            "name": "SHero_Accessory",
+            "caution": [],
+            "description": [
+                "出示學生證訂購一條享可有九折",
+                "兩條以上享可有八八折",
+                "團體訂購可獲額外折扣優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "shero_accessory"
+        },
+        {
+            "name": "Crystal.startup_",
+            "caution": [],
+            "description": [
+                "出示學生證買$500有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "@crystal.startup_"
+        },
+        {
+            "name": "vip_puzz_puck",
+            "caution": [],
+            "description": [
+                "出示學生證，買滿$65送一隻自選耳環或耳夾"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "vip_puzz_puck"
+        },
+        {
+            "name": "MINIMILI ACCESSORIES",
+            "caution": [],
+            "description": [
+                "出示學生證，可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "minimili_accessories"
+        },
+        {
+            "name": "beibeiconshopv3v",
+            "caution": [
+                "韓國lensme lenstown lenstown lenstory olens idollens等貨品不設優惠"
+            ],
+            "description": [
+                "出示學生證及follow IG 韓國廠透明年拋$80一對",
+                "韓國廠1day款一盒10pcs 共10款可選$108一盒",
+                "韓國廠年款過百款色可選$120一對 / $230兩對",
+                "韓國廠月款共14款可選$115一對"
+            ],
+            "location": [],
+            "isOnline": true,
+            "igName": "beibeiconshopv3v"
+        }
+    ]
+}
