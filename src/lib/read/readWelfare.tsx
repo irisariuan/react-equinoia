@@ -4,7 +4,7 @@ export interface WelfareStore {
     name: string,
     description: string[],
     caution: string[],
-    location?: string[],
+    location: string[],
     link?: string,
     igName?: string,
     isOnline: boolean

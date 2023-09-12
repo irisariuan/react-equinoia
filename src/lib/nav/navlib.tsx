@@ -51,9 +51,9 @@ export function MobileDropdownLinks({ link, pathname, activeHandler, subLink = f
                         <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0], height: [null, 0] }} className="origin-top">
                             {link.content.map((v, i) => {
                                 if (isString(v.content)) {
-                                    return <MobileLink link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} delay={i} />
+                                    return <MobileLink link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} delay={i} key={i} />
                                 }
-                                return <MobileDropdownLinks link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} />
+                                return <MobileDropdownLinks link={v} pathname={pathname} activeHandler={activeHandler} subLink={true} key={i} />
                             })}
                         </motion.div>}
                 </AnimatePresence>

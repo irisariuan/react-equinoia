@@ -19,12 +19,12 @@ export default function ({ name, igName, description, caution, location, link, i
                         isOnline && <FontAwesomeIcon icon={faShopSlash} />
                     }
                 </div>
-                <Link href={"https://instagram.com/" + igName} className="flex items-center w-max">
+                <a href={"https://instagram.com/" + igName} className="flex items-center w-max">
                     <FontAwesomeIcon icon={faInstagram as IconProp} className="mr-2" />
                     <span className="bg-clip-text from-orange-600 to-purple-600 bg-gradient-to-r text-transparent">
                         @{igName}
                     </span>
-                </Link>
+                </a>
             </div>
             <div className="flex flex-col">
                 <ol>
@@ -47,12 +47,12 @@ export default function ({ name, igName, description, caution, location, link, i
                     </li>
                     <li>
                         {link &&
-                            <Link href={link} className="flex items-center">
+                            <a href={link.startsWith('https://') ? link : ('https://' + link)} className="w-full flex items-center">
                                 <FontAwesomeIcon icon={faLink} className="mr-2 text-blue-500" />
                                 <span className="text-blue-500 underline">
                                     {link}
                                 </span>
-                            </Link>
+                            </a>
                         }
                     </li>
                     {caution.map((v, i) => {

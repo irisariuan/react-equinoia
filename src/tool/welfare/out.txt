@@ -1,0 +1,100 @@
+{
+    "store": [
+        {
+            "name": "Cloudys box",
+            "igName": "cloudys.box",
+            "caution": [
+                "不包括郵費/運費"
+            ],
+            "description": [
+                "出示學生證每次消費滿$60或以上全單可減免$10"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Uk.hk.co",
+            "igName": "uk.hk.co",
+            "caution": [],
+            "description": [
+                "出示學生證凡購買兩件貨品可享有九五折優惠",
+                "三任或以上可享有八五折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Beloved one in a million",
+            "igName": "beloved_million",
+            "caution": [],
+            "description": [
+                "出示學生證 消費可享有九五折"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Fafa.store.hk",
+            "igName": "fafa.store.hk",
+            "caution": [],
+            "description": [
+                "出示學生證可享有八折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Crave.fy",
+            "igName": "crave.fy",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "B612.planet",
+            "igName": "b612.planet",
+            "caution": [],
+            "description": [
+                "出示學生證及follow IG可享有九五折優惠",
+                "單次購物滿100或以上（折後），可額外獲贈小禮物一份。"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "handmade0.8",
+            "igName": "handmade0.8",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "All About Feeling",
+            "igName": "feelingshoppp",
+            "caution": [],
+            "description": [
+                "出示學生證購買手機殼可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Have a bite of cloud",
+            "igName": "biteofcloud",
+            "caution": [],
+            "description": [
+                "出示學生證買滿$100可享有九折優惠"
+            ],
+            "location": [
+                "觀塘中美中心B座9樓一室"
+            ],
+            "isOnline": false
+        }
+    ]
+}

@@ -57,7 +57,7 @@
             ],
             "isOnline": false,
             "igName": "lookrightt",
-            "link": "www.lookrightt.com no"
+            "link": "www.lookrightt.com"
         },
         {
             "name": "Offroad",
@@ -237,6 +237,215 @@
             "location": [],
             "isOnline": true,
             "igName": "i.dealism_outfit"
+        },
+        {
+            "name": "Ballheads",
+            "igName": "ballheads",
+            "caution": [
+                "特價貨品除外"
+            ],
+            "description": [
+                "出示學生證及follow IG全年正價貨品可享有九五折優惠"
+            ],
+            "location": [
+                "旺角登打士街56號家樂坊16樓1602-03"
+            ],
+            "isOnline": false,
+            "link": "www.ballhead.com.hk"
+        },
+        {
+            "name": "Blue Monday2.5",
+            "igName": "bluemonday2.5",
+            "caution": [
+                "公價產品及飾物除外",
+                "如需分單結算需提供另一張學生證"
+            ],
+            "description": [
+                "出示學生證可享有全單九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "link": "https://bluemonday25.boutir.com/"
+        },
+        {
+            "name": "little big clothess",
+            "igName": "little._big._clothess",
+            "caution": [
+                "訂購貨品時要大概一至兩星期先送到，同學要記得預留時間啦"
+            ],
+            "description": [
+                "出示學生證買滿$80可享有九折優惠",
+                "買滿$100可享有八五折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "melon.c",
+            "igName": "melonc.co",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "link": "www.melonc.co"
+        },
+        {
+            "name": "Nowstyle22",
+            "igName": "nowstyle22",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "link": "www.nowstyle22.co"
+        },
+        {
+            "name": "PicNic.hk",
+            "igName": "picnic.hk",
+            "caution": [],
+            "description": [
+                "出示學生證購買衣服類商品可享有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "link": "www.picnic.hk"
+        },
+        {
+            "name": "rrfor_renaa",
+            "igName": "rrfor_renaa",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九五折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "link": "https://renaclothing.com"
+        },
+        {
+            "name": "TY Clothes Shop",
+            "igName": "ty.clothesshop",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠",
+                "買滿六件貨品獲送免費一件貨品"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "ying_s_shop",
+            "igName": "ying_s_shop",
+            "caution": [
+                "不可與其他優惠同時使用"
+            ],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true,
+            "link": "https://yingsshop.shoplineapp.com"
+        },
+        {
+            "name": "hkbuyjp",
+            "igName": "hkbuyjp",
+            "caution": [],
+            "description": [
+                "出示學生證購買衣物或配件滿兩件或以上可減$20"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "ohlook_hk",
+            "igName": "ohlook_hk",
+            "caution": [],
+            "description": [
+                "出示學生證可免費電腦畫圖",
+                "聯班/社優惠",
+                "兩班減200",
+                "三班減360",
+                "四班減480",
+                "定購30件以上可獲送一件衫予班主任"
+            ],
+            "location": [
+                "荔枝角大南西街1008號華匯廣場17樓1701室"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "OHTEE.hk",
+            "igName": "ohtee_hk",
+            "caution": [
+                "每班需訂購25件或以上"
+            ],
+            "description": [
+                "出示學生證聯班訂購每班減100",
+                "團體相回圖即回贈50，每張訂單可享有一次回購"
+            ],
+            "location": [
+                "荔枝角香港工業中心C座3樓18B室"
+            ],
+            "isOnline": false,
+            "link": "https://ohtee.hk"
+        },
+        {
+            "name": "TT PRINTING",
+            "igName": "tt_printing",
+            "caution": [
+                "各社最少訂購60件 （35件起有優惠）",
+                "需要於12個工作天前下單方可享有優惠"
+            ],
+            "description": [
+                "出示學生證可享有報價九折優惠",
+                "聯班優惠（現金卷）",
+                "1班訂購：$10",
+                "2班訂購：$40",
+                "3班訂購：$90",
+                "4班訂購：$160",
+                "聯社優惠（現金回贈）",
+                "2社同行：全張訂單回贈高達$200",
+                "3社同行：全張訂單回贈高達$300",
+                "4社同行：全張訂單回贈高達$500及免費送貨到校"
+            ],
+            "location": [
+                "香港葵芳大連排道金龍工業中心一座13樓K室"
+            ],
+            "isOnline": false,
+            "link": "https://ttprinting.hk"
+        },
+        {
+            "name": "_tee.design_",
+            "igName": "_tee.design_",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠",
+                "兩班訂購即減$200",
+                "三班訂購即減$300"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Marking Printing Ltd.",
+            "igName": "marking_printing",
+            "caution": [],
+            "description": [
+                "出示學生證印衫可享有八折優惠",
+                "一件起印包郵及九五折優惠",
+                "學校球隊訂製贊助六折優惠",
+                "兩班聯購可減免$200",
+                "三班聯購可減免$300",
+                "四班聯購可減免$500以及送班主任衫乙件",
+                "聯社可減免$1000以及免運費"
+            ],
+            "location": [
+                "油塘茶果嶺道610號生利工業中心7樓9B室"
+            ],
+            "isOnline": false,
+            "link": "https://www.marking-printing.com"
         }
     ]
 }
