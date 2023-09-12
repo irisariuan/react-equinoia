@@ -26,7 +26,7 @@ export default function ({ name, igName, description, caution, location, link, i
                     </span>
                 </a>
             </div>
-            <div className="flex flex-col">
+            <div className="flex flex-col gap-y-2">
                 <ol>
                     {description.map((v, i) => {
                         return (
@@ -45,13 +45,15 @@ export default function ({ name, igName, description, caution, location, link, i
                             )
                         })}
                     </li>
-                    <li>
+                    <li className="mb-2">
                         {link &&
-                            <a href={link.startsWith('https://') ? link : ('https://' + link)} className="w-full flex items-center">
+                            <a href={link.startsWith('https://') ? link : ('https://' + link)} className="flex items-center">
                                 <FontAwesomeIcon icon={faLink} className="mr-2 text-blue-500" />
-                                <span className="text-blue-500 underline">
-                                    {link}
-                                </span>
+                                <div className="w-full overflow-x-auto">
+                                    <span className="text-blue-500 underline">
+                                        {link}
+                                    </span>
+                                </div>
                             </a>
                         }
                     </li>
