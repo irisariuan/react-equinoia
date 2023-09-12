@@ -8,6 +8,9 @@ import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 import { faLink } from "@fortawesome/free-solid-svg-icons/faLink";
 import { faShopSlash } from "@fortawesome/free-solid-svg-icons/faShopSlash";
+import { StoreLink } from "./store/link";
+import { StoreLocation } from "./store/location";
+import { StoreCaution } from "./store/caution";
 
 export default function ({ name, igName, description, caution, location, link, isOnline }: WelfareStore) {
     return (
@@ -26,8 +29,8 @@ export default function ({ name, igName, description, caution, location, link, i
                     </span>
                 </a>
             </div>
-            <div className="flex flex-col gap-y-2">
-                <ol>
+            <div>
+                <ol className="flex flex-col gap-y-2">
                     {description.map((v, i) => {
                         return (
                             <li key={i}>
@@ -36,33 +39,18 @@ export default function ({ name, igName, description, caution, location, link, i
                         )
                     })}
                     <li className="my-2">
-                        {location?.map((v, i) => {
-                            return (
-                                <div key={i}>
-                                    <FontAwesomeIcon icon={faLocationDot} className="mr-2 text-red-950" />
-                                    <span className="text-red-950">{v}</span>
-                                </div>
-                            )
-                        })}
+                        {location?.map((v, i) => 
+                            <StoreLocation location={v} key={i} />
+                        )}
                     </li>
                     <li className="mb-2">
                         {link &&
-                            <a href={link.startsWith('https://') ? link : ('https://' + link)} className="flex items-center">
-                                <FontAwesomeIcon icon={faLink} className="mr-2 text-blue-500" />
-                                <div className="w-full overflow-x-auto">
-                                    <span className="text-blue-500 underline">
-                                        {link}
-                                    </span>
-                                </div>
-                            </a>
+                            <StoreLink link={link} />
                         }
                     </li>
                     {caution.map((v, i) => {
                         return (
-                            <li key={i} className="flex items-center">
-                                <FontAwesomeIcon icon={faCircleExclamation} className="mr-2 text-gold-300" />
-                                <span className="text-gold-300">{v}</span>
-                            </li>
+                            <StoreCaution key={i}>{v}</StoreCaution>
                         )
                     })}
                 </ol>
