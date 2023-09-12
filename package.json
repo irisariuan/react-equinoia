@@ -17,6 +17,7 @@
     "@ionic/react": "^7.2.1",
     "@ionic/react-router": "^7.2.1",
     "@react-spring/web": "^9.7.3",
+    "@vercel/analytics": "^1.0.2",
     "framer-motion": "^10.15.0",
     "lorem-ipsum": "^2.0.8",
     "next": "^13.4.19",
