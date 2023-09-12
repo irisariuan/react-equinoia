@@ -1,4 +1,5 @@
 import '@/app/globals.css'
+import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next'
 import { Playfair_Display } from 'next/font/google'
 import { Providers } from '@/app/providers'
@@ -23,6 +24,7 @@ export default function RootLayout({
 				<Providers>
 					{children}
 				</Providers>
+				<Analytics />
 			</body>
 		</html>
 	)
