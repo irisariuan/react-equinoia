@@ -37,5 +37,5 @@ next-env.d.ts
 /src/test/*
 /release/*
 
-/tool/welfare/*.js
-/tool/welfare/*.txt
+/src/tool/welfare/*.js
+/src/tool/welfare/*.txt
