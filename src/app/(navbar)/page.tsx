@@ -17,9 +17,9 @@ export default function Home() {
     setTheme('light')
     const [popupList, setPopupList] = useContext(PopupContext)
     
-    useEffect(() => {
-        setPopupList([{content: 'hello world', title: 'title', duration: 0}])
-    }, [])
+    // useEffect(() => {
+    //     setPopupList([{content: 'hello world', title: 'title', duration: 0}])
+    // }, [])
 
     return (
         <main className="dark:text-white">
