@@ -3,7 +3,7 @@ import { config } from '@fortawesome/fontawesome-svg-core'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import Title from "@/components/title";
 import { motion } from 'framer-motion';
-import { PopupContext, PopupView } from '@/lib/usePopup';
+import { PopupBubbleValue, PopupContext, PopupView, addPopup } from '@/lib/usePopup';
 import { useContext, useEffect } from 'react';
 import { Satisfy, Permanent_Marker } from 'next/font/google'
 import { useTheme } from 'next-themes';
@@ -17,6 +17,10 @@ export default function Home() {
     setTheme('light')
     const [popupList, setPopupList] = useContext(PopupContext)
     
+    useEffect(() => {
+        setPopupList([{content: 'hello world', title: 'title', duration: 0}])
+    }, [])
+
     return (
         <main className="dark:text-white">
             <div className='bg-white h-screen w-full flex justify-center items-center flex-col'>
