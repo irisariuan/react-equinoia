@@ -4,7 +4,7 @@ import { Box } from "../ui/box";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
+import { faCircleExclamation, faTowerBroadcast } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
 import { faLink } from "@fortawesome/free-solid-svg-icons/faLink";
 import { faShopSlash } from "@fortawesome/free-solid-svg-icons/faShopSlash";
@@ -19,7 +19,7 @@ export default function ({ name, igName, description, caution, location, link, i
                 <div className="flex items-center">
                     <span className="mr-2 text-2xl">{name}</span>
                     {
-                        isOnline && <FontAwesomeIcon icon={faShopSlash} />
+                        isOnline && <FontAwesomeIcon icon={faTowerBroadcast} />
                     }
                 </div>
                 <a href={"https://instagram.com/" + igName} className="flex items-center w-max">
