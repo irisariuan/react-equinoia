@@ -11,7 +11,7 @@ export default function () {
                 <p className="text-xl font-bold mb-5">Contact Us</p>
                 <div className="flex flex-row items-center justify-center gap-2">
                     <Link href="https://www.instagram.com/equinoia.mc" target="_blank" className="flex items-center justify-center [&>]:hover:text-blue-600" >
-                        <FontAwesomeIcon icon={faInstagram as IconProp} className="mr-2 text-xl" />
+                        <FontAwesomeIcon icon={faInstagram as IconProp} className="mr-2 text-xl " />
                         <span className="text-sm lg:text-lg bg-clip-text from-orange-600 to-purple-600 bg-gradient-to-r hover:text-transparent">Instagram</span>
                     </Link>
                     <div className="h-4 w-[1px] bg-rice-content" />

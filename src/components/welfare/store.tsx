@@ -14,7 +14,7 @@ import { StoreCaution } from "./store/caution";
 
 export default function ({ name, igName, description, caution, location, link, isOnline }: WelfareStore) {
     return (
-        <div className="bg-rice rounded-xl p-4 m-2 lg:my-4 border border-rice-content/50">
+        <div className="bg-rice rounded-xl p-4 my-2 lg:my-4 border border-rice-content/50">
             <div className="mb-4 lg:mb-6">
                 <div className="flex items-center">
                     <span className="mr-2 text-2xl">{name}</span>
@@ -38,16 +38,18 @@ export default function ({ name, igName, description, caution, location, link, i
                             </li>
                         )
                     })}
-                    <li className="my-2">
-                        {location?.map((v, i) => 
-                            <StoreLocation location={v} key={i} />
-                        )}
-                    </li>
-                    <li className="mb-2">
-                        {link &&
+                    {(location.length > 1) &&
+                        <li className="my-2">
+                            {location.map((v, i) =>
+                                <StoreLocation location={v} key={i} />
+                            )}
+                        </li>
+                    }
+                    {link &&
+                        <li className="mb-2">
                             <StoreLink link={link} />
-                        }
-                    </li>
+                        </li>
+                    }
                     {caution.map((v, i) => {
                         return (
                             <StoreCaution key={i}>{v}</StoreCaution>
