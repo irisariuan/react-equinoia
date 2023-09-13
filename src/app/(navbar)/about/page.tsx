@@ -12,12 +12,12 @@ export default async function () {
                     <ParagraphTitle>About Equinoia</ParagraphTitle>
                 </Box>
                 <ParagraphContent marginY={4}>
-                    Equinoia is composed of the words “equinox” and “eunoia’’.
+                    Equinoia is composed of the words "Equinox" and "Eunoia".
                 </ParagraphContent>
                 <Separator />
                 <ParagraphTitle>'Equinox'</ParagraphTitle>
                 <ParagraphContent marginY={4}>
-                    “Equinox” refers to the turning point, which divides the day and the night.
+                    "Equinox" refers to the turning point, which divides the day and the night.
                     At this turning point, we have overcome all the pain and suffering of the night,
                     meanwhile, are embracing the dawn and a brand new day. We hope to become the beacon of faith, bringing hope to our school and all our fellow schoolmates.
                 </ParagraphContent>
@@ -32,7 +32,7 @@ export default async function () {
                 <Separator />
                 <ParagraphTitle>'Eunoia'</ParagraphTitle>
                 <ParagraphContent marginY={4}>
-                    “Eunoia” not only refers to the goodwill towards each other, which shows tolerance, kindness and helpfulness, but it also refers to the friendliness and respect between the presenter and the listener. From the perspective of students, the Students’ Union serves as a bridge between them and the college, allowing them to express their views and opinions. Therefore, we would maintain an approachable attitude and at pains to listen to the voices and opinions of every student.
+                    "Eunoia" not only refers to the goodwill towards each other, which shows tolerance, kindness and helpfulness, but it also refers to the friendliness and respect between the presenter and the listener. From the perspective of students, the Students’ Union serves as a bridge between them and the college, allowing them to express their views and opinions. Therefore, we would maintain an approachable attitude and at pains to listen to the voices and opinions of every student.
                 </ParagraphContent>
                 <Separator />
                 <ParagraphContent marginY={4}>
@@ -48,7 +48,7 @@ export default async function () {
             <div className="w-4/5 mt-4">
                 <div className="mb-6 lg:mb-10 mt-4">
                     <ParagraphTitle>
-                        「Equinox」：
+                        「Equinox」:
                     </ParagraphTitle>
                     <ParagraphContent marginY={4}>
                         Equinox為分界點，晝夜平分之意。在分界點，度過夜的煎熬，便迎來晨的篇章。本閣希望可以成為學校與同學們的一縷晨光。有別於夜，清晨予人希望；予人動力；予人耳目一新之感，本閣亦致力帶來與眾不同的體驗，在盡心盡力服務同學之餘，卻不會陳腔濫調，而是可以跨出新一步，如與前人分界一般，開啟全新的紀元。與同學一同走向豔陽天。
