@@ -35,7 +35,7 @@ yarn-error.log*
 next-env.d.ts
 
 /src/test/*
-/release/*
+/release/*.zip
 
 /src/tool/welfare/*.js
 /src/tool/welfare/*.txt
