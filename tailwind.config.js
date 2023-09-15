@@ -7,6 +7,12 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			fontFamily: {
+				serif: [
+					'var(--font-playfair)',
+					'var(--font-notoSerif)',
+				]
+			},
 			backgroundImage: {
 			},
 			colors: {

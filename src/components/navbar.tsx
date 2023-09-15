@@ -69,7 +69,7 @@ export default function () {
         <div className="sticky top-0 w-screen z-50 origin-top" ref={r}>
             <div className="z-50 flex bg-nav/80 dark:bg-nav-dark/80 flex-wrap gap-2 p-2 lg:p-5 m-0 w-screen items-center dark:text-white backdrop-blur-md border-b border-rice-content/50 dark:border-white/50 ">
                 <img src="/school_icon.png" alt="MCKLN icon" className="lg:h-12 lg:w-12 md:w-10 md:h-10 w-8 h-8" />
-                <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 "}>MCKLN | <Link href="/">Equinoia <span className={chinese.className}>凝晞</span></Link></span>
+                <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 flex items-center gap-2"}>MCKLN <div className="h-5 lg:h-7 rounded w-px bg-gold-300 inline-block" /> <Link href="/" className="text-gold-400">Equinoia 凝晞</Link></span>
                 {
                     ok && (!isMobile ? (
                         <NormalNav links={navList} />
