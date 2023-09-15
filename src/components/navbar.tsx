@@ -10,8 +10,6 @@ import Link from "next/link";
 import { navList } from "@/lib/nav/navList";
 
 
-const righteous = Righteous({ weight: '400', subsets: ['latin'] })
-const chinese = Noto_Sans_TC({ weight: '700', subsets: ['latin'] })
 const OFFSET_Y = 90;
 
 export default function () {
