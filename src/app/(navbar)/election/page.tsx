@@ -11,7 +11,7 @@ export default function () {
                     <span className="text-xl lg:text-2xl">中文版</span>
                     <iframe src="https://drive.google.com/file/d/17Nsp1i09Ft2DNPEl_cUecqoJ2IJ5aGaE/preview" allow="autoplay" height="400" className="rounded-lg"></iframe>
                 </div>
-                <div className="flex flex-col gap-y-2 w-full">
+                <div className="flex flex-col gap-y-2 w-full mt-6">
                     <span className="text-xl lg:text-2xl">English Version</span>
                     <iframe src="https://drive.google.com/file/d/1Lx4tleRcPJBxneIapqTxY98RdmOC6m6k/preview" allow="autoplay" height="400" className="rounded-lg"></iframe>
                 </div>
