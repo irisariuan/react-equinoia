@@ -15,7 +15,7 @@ export default function () {
                 welfare.map((v, i) => {
                     return (
                         <div key={i}>
-                            <Store name={v.name} igName={v.igName} description={v.description} caution={v.caution} location={v.location} link={v.link} isOnline={v.isOnline} />
+                            <Store store={v} />
                         </div>
                     )
                 })

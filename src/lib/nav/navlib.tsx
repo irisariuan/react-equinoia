@@ -109,19 +109,24 @@ export function NormalDropdownLinks({ links, pathname, customHandler }: { links:
             <AnimatePresence>
                 {
                     opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} className="absolute top-20 flex flex-col origin-top items-center justify-center">
-                        {/* <div className="overflow-hidden z-[200]">
-                            <div className="h-2 w-2 bg-rice transform rotate-45 origin-bottom-left border border-rice-content"></div>
-                        </div> */}
                         <div className="flex flex-col p-2 w-max h-max z-[200] bg-rice border border-rice-content rounded-xl gap-2 justify-center items-center">
                             <motion.button animate={{ rotate: ['0.5turn', '0turn'] }} title="Back" onClick={clickHandler} className="h-full">
                                 <FontAwesomeIcon icon={faCaretUp} />
                             </motion.button>
                             {
-                                links.content.map(v => {
+                                links.content.map((v, i) => {
                                     if (isString(v.content)) {
-                                        return (<NormalLink link={v} pathname={pathname} customHandler={() => {setOpen(false)}} />)
+                                        return (
+                                            <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} transition={{ delay: i / 10 }} className="origin-bottom">
+                                                <NormalLink link={v} pathname={pathname} customHandler={() => { setOpen(false) }} />
+                                            </motion.div>
+                                        )
                                     }
-                                    return <NormalDropdownLinks links={v} pathname={pathname} customHandler={() => {setOpen(false)}} />
+                                    return (
+                                        <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} transition={{ delay: i / 10 }} className="origin-bottom">
+                                            <NormalDropdownLinks links={v} pathname={pathname} customHandler={() => { setOpen(false) }} />
+                                        </motion.div>
+                                    )
                                 })
                             }
                         </div>

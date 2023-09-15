@@ -5,11 +5,13 @@ export interface WelfareStore {
     description: string[],
     caution: string[],
     location: string[],
-    igName: string,
+    tip?: string[]
+    igName?: string,
     isOnline: boolean,
     link?: string,
+    phoneNo?: string,
 }
-export function readWelfare(filename: string) : WelfareStore[] {
-    const o: {store: WelfareStore[]} = JSON.parse(readFileSync(filename, {encoding: 'utf8'}))
+export function readWelfare(filename: string): WelfareStore[] {
+    const o: { store: WelfareStore[] } = JSON.parse(readFileSync(filename, { encoding: 'utf8' }))
     return o.store
 }

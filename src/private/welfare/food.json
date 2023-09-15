@@ -1,0 +1,270 @@
+{
+    "store": [
+        {
+            "name": "休閒咖啡",
+            "caution": [],
+            "description": [
+                "出示學生證凍飲免加費"
+            ],
+            "location": [
+                "油麻地眾坊街59號C"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "港嘢茶檔",
+            "caution": [
+                "推銷品除外"
+            ],
+            "description": [
+                "出示學生證可享有八八折優惠"
+            ],
+            "location": [
+                "油麻地北海街7號地舖"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "巡味餐廳",
+            "caution": [],
+            "description": [
+                "出示學生證所有學生套餐凍飲免加費"
+            ],
+            "location": [
+                "油麻地彌敦道495號地下"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "靚湯廚房",
+            "caution": [
+                "不可與其他優惠同時使用"
+            ],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [
+                "彌敦道380號逸東酒店LG層7號舖"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "牛B仔",
+            "caution": [],
+            "description": [
+                "出示學生證餐牌上所有飯類飲品免加費"
+            ],
+            "location": [
+                "佐敦北海街11號地舖"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "彌敦冰室",
+            "caution": [],
+            "description": [
+                "出示優惠卡可享有八八折優惠"
+            ],
+            "location": [
+                "油麻地彌敦道僑江大廈524地下A"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "禮三井刺身壽司",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [
+                "油麻地彌敦道456-458號"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "味夠串",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠及罐裝飲品一罐"
+            ],
+            "location": [
+                "油麻地廟街41號"
+            ],
+            "isOnline": false,
+            "tip": [
+                "營業時間為晚上，同學若果在營業時間外需打電話點餐"
+            ],
+            "phoneNo": "51351482"
+        },
+        {
+            "name": "ZEPPELIN HOT DOG",
+            "igName": "zeppelinhotdog",
+            "caution": [],
+            "description": [
+                "出示學生證單次消費滿$40減$5折扣優惠"
+            ],
+            "location": [
+                "全港門店 https://www.zeppelinhotdog.com/shop-location"
+            ],
+            "isOnline": false,
+            "link": "https://www.zeppelinhotdog.com/shop"
+        },
+        {
+            "name": "唇茶",
+            "igName": "teaonlyhk",
+            "caution": [],
+            "description": [
+                "出示學生證及follow IG可享有九折優惠"
+            ],
+            "location": [
+                "尖沙咀堪富利士道8A地舖",
+                "銅鑼灣渣甸街30號地下B舖",
+                "旺角中心2樓SB06",
+                "荔枝角青山道489至491香港工業中心A座地下A4A",
+                "沙田石門京瑞廣場二期地下G27舖",
+                "葵涌廣場3樓TOP世界T19-T20"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "Milksha",
+            "igName": "milkshahk",
+            "caution": [
+                "每日只可使用一次"
+            ],
+            "description": [
+                "出示學生證一杯飲品可減$5折扣優惠"
+            ],
+            "location": [
+                "旺角西洋菜南街百寶利商業中心地下"
+            ],
+            "isOnline": false,
+            "link": "www.milkshoptea.com"
+        },
+        {
+            "name": "響茶",
+            "igName": "loudtea_hk",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [
+                "北角英皇道177號利都樓地下A1號",
+                "上環文咸東街32號A舖",
+                "柴灣柴灣道350號樂軒臺"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "山下茶舍",
+            "igName": "saanhaacaase_hk",
+            "caution": [],
+            "description": [
+                "出示學生證每杯可減$3折扣優惠"
+            ],
+            "location": [
+                "屯門湖秀街2號悅湖山莊商場地下110號舖"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "acupofcat_cafe",
+            "igName": "acupofcat_cafe",
+            "caution": [],
+            "description": [
+                "貓cafe：出示學生證88/自選（3小時）",
+                "茶飲小食店買招牌黑白珍珠奶茶及招牌手工波提可減$5折扣優惠"
+            ],
+            "location": [
+                "葵芳金龍工業中心2座24J",
+                "葵涌廣場2樓007號鋪"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "迷日店",
+            "igName": "maniaj_offical",
+            "caution": [],
+            "description": [
+                "出示學生證買滿$20或以上每一個商品可減$2優惠"
+            ],
+            "location": [
+                "葵芳葵涌廣場3樓TOP世界 3069-T7號鋪",
+                "荃灣大河道91-97號天保大廈地下E2舖"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "吸飲cindrinks",
+            "igName": "cindrinks_",
+            "caution": [],
+            "description": [
+                "出示學生證正價乳酪雪糕及飲品可享有八五折優惠"
+            ],
+            "location": [
+                "旺角銀城廣場地庫B60-61"
+            ],
+            "isOnline": false,
+            "tip": [
+                "佢哋仲有提供買一送一優惠，同學記得去睇吓啊！"
+            ]
+        },
+        {
+            "name": "refresh!",
+            "igName": "refresh.taipo",
+            "caution": [],
+            "description": [
+                "出示學生證可減$4折扣優惠"
+            ],
+            "location": [
+                "大埔寶湖道同秀坊15號後座C"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "Ho9cake",
+            "igName": "ho9cake",
+            "caution": [],
+            "description": [
+                "出示學生證每位同學可享有每月一次九五折優惠"
+            ],
+            "location": [
+                "長沙灣青山道588-592號永盛工業大廈6樓4室"
+            ],
+            "isOnline": false,
+            "link": "www.ho9cake.com"
+        },
+        {
+            "name": "MILK BAR",
+            "igName": "milkbarcafe",
+            "caution": [],
+            "description": [
+                "出示學生證買滿$100減$10（星期六日除外）"
+            ],
+            "location": [
+                "深水埗鴨寮街79號"
+            ],
+            "isOnline": false
+        },
+        {
+            "name": "Olerisy",
+            "igName": "olerisy_cake",
+            "caution": [],
+            "description": [
+                "出示學生證可享有九折優惠"
+            ],
+            "location": [],
+            "isOnline": true
+        },
+        {
+            "name": "Season Bakery",
+            "igName": "season_bakery",
+            "caution": [],
+            "description": [
+                "Follow，like 及repost購買蛋糕，即可減$20"
+            ],
+            "location": [],
+            "isOnline": true
+        }
+    ]
+}

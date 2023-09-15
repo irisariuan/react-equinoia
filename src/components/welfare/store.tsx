@@ -6,48 +6,86 @@ import { StoreLocation } from "./store/location";
 import { StoreCaution } from "./store/caution";
 import IgLink from "./store/instagramLink";
 import Tooltip from "../ui/tooltip";
+import { StorePhone } from "./store/phone";
+import { StoreTip } from "./store/tip";
 
-export default function ({ name, igName, description, caution, location, link, isOnline }: WelfareStore) {
+export default function ({ store }: { store: WelfareStore }) {
+
     return (
         <div className="bg-rice rounded-xl p-4 my-2 lg:my-4 border border-rice-content/50">
             <div className="mb-4 lg:mb-6">
                 <div className="flex items-center">
-                    <span className="mr-2 text-2xl">{name}</span>
+                    <span className="mr-2 text-2xl">{store.name}</span>
                     {
-                        isOnline &&
+                        store.isOnline &&
                         <Tooltip tooltipText="Online Shop">
                             <FontAwesomeIcon icon={faTowerBroadcast} className="text-lg" />
                         </Tooltip>
                     }
                 </div>
-                <IgLink igName={igName} />
+                {
+                    store.igName &&
+                    <IgLink igName={store.igName} />
+                }
             </div>
             <div>
-                <ol className="flex flex-col gap-y-2">
-                    {description.map((v, i) => {
-                        return (
-                            <li key={i}>
-                                <span>{v}</span>
-                            </li>
-                        )
-                    })}
-                    {(location.length > 1) &&
-                        <li className="my-2">
-                            {location.map((v, i) =>
+                <ol className="flex flex-col gap-y-2 justify-center">
+                    {
+                        (store.description.length > 0) &&
+                        <li>
+                            {
+                                store.description.map((v, i) => {
+                                    return (
+                                        <div key={i}>
+                                            <span>{v}</span>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </li>
+                    }
+                    {
+                        (store.location.length > 0) &&
+                        <li>
+                            {store.location.map((v, i) =>
                                 <StoreLocation location={v} key={i} />
                             )}
                         </li>
                     }
-                    {link &&
-                        <li className="mb-2">
-                            <StoreLink link={link} />
+                    {
+                        store.phoneNo &&
+                        <li>
+                            <StorePhone phoneNo={store.phoneNo} />
                         </li>
                     }
-                    {caution.map((v, i) => {
-                        return (
-                            <StoreCaution key={i}>{v}</StoreCaution>
-                        )
-                    })}
+                    {
+                        store.link &&
+                        <li>
+                            <StoreLink link={store.link} />
+                        </li>
+                    }
+                    {
+                        store.tip &&
+                        store.tip.map((v, i) => {
+                            return (
+                                <li key={i}>
+                                    <StoreTip tip={v} />
+                                </li>
+                            )
+                        })
+                    }
+                    {
+                        (store.caution.length > 0) &&
+                        <li>
+                            {
+                                store.caution.map((v, i) => {
+                                    return (
+                                        <StoreCaution key={i}>{v}</StoreCaution>
+                                    )
+                                })
+                            }
+                        </li>
+                    }
                 </ol>
             </div>
         </div>
