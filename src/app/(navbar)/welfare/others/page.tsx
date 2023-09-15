@@ -10,7 +10,7 @@ export default function () {
         <div className="p-2">
             <ParagraphTitle>Accessories</ParagraphTitle>
             <Separator alignCenter={false} />
-            <div className="mt-4 lg:mt-12"></div>
+            <div className="mt-6 lg:mt-12"></div>
             {
                 welfare.map((v, i) => {
                     return (
