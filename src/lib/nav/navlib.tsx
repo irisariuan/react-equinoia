@@ -103,8 +103,8 @@ export function NormalDropdownLinks({ links, pathname, customHandler }: { links:
     return (
         <div className="flex flex-col items-center">
             <button className="mx-2 flex items-center justify-center" onClick={clickHandler}>
-                <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
                 <span className={"lg:text-2xl text-xl selection:bg-none hover:cursor-pointer hover:text-blue-500 " + (isSublink(links.content, pathname) ? 'font-bold' : '')}>{links.title}</span>
+                <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="ml-2" />
             </button>
             <AnimatePresence>
                 {

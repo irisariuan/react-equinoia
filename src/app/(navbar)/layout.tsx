@@ -4,6 +4,7 @@ import { Inter, Righteous } from 'next/font/google'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { PopupContext, PopupView } from '@/lib/usePopup'
+import FixedInstagramIcon from '@/components/fixedInstagramIcon'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -23,6 +24,7 @@ export default function RootLayout({
 						<Footer />
 					</div>
 				</div>
+				<FixedInstagramIcon />
 			</div>
 		</PopupView>
 	)
