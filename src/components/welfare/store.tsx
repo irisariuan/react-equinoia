@@ -1,16 +1,11 @@
 import { WelfareStore } from "@/lib/read/readWelfare";
-import Link from "next/link";
-import { Box } from "../ui/box";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleExclamation, faTowerBroadcast } from "@fortawesome/free-solid-svg-icons";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons/faLocationDot";
-import { faLink } from "@fortawesome/free-solid-svg-icons/faLink";
-import { faShopSlash } from "@fortawesome/free-solid-svg-icons/faShopSlash";
+import { faTowerBroadcast } from "@fortawesome/free-solid-svg-icons";
 import { StoreLink } from "./store/link";
 import { StoreLocation } from "./store/location";
 import { StoreCaution } from "./store/caution";
+import IgLink from "./store/instagramLink";
+import Tooltip from "../ui/tooltip";
 
 export default function ({ name, igName, description, caution, location, link, isOnline }: WelfareStore) {
     return (
@@ -19,15 +14,13 @@ export default function ({ name, igName, description, caution, location, link, i
                 <div className="flex items-center">
                     <span className="mr-2 text-2xl">{name}</span>
                     {
-                        isOnline && <FontAwesomeIcon icon={faTowerBroadcast} />
+                        isOnline &&
+                        <Tooltip tooltipText="Online Shop">
+                            <FontAwesomeIcon icon={faTowerBroadcast} className="text-lg" />
+                        </Tooltip>
                     }
                 </div>
-                <a href={"https://instagram.com/" + igName} className="flex items-center w-max">
-                    <FontAwesomeIcon icon={faInstagram as IconProp} className="mr-2" />
-                    <span className="bg-clip-text from-orange-600 to-purple-600 bg-gradient-to-r text-transparent">
-                        @{igName}
-                    </span>
-                </a>
+                <IgLink igName={igName} />
             </div>
             <div>
                 <ol className="flex flex-col gap-y-2">

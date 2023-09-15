@@ -14,6 +14,7 @@ module.exports = {
 				'nav-dark': '#363636',
 				'rice': '#fdf9ee',
 				'rice-dark': '#14120d',
+				'rice-tooltip': '#ede3c7',
 				'rice-content': '#d6caa7',
 				gold: {
 					100: '#fdf9ee',

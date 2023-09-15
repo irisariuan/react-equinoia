@@ -1,5 +1,6 @@
-'use client'
 import '@/app/globals.css'
+import { faTowerBroadcast } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export default function RootLayout({
     children,
@@ -18,6 +19,10 @@ export default function RootLayout({
                 <span>
                     *以上福利在選舉結果公布後才會生效
                 </span>
+                <div className="">
+                    <FontAwesomeIcon icon={faTowerBroadcast} className="text-sm mx-1" />
+                    <span>: 只限網店</span>
+                </div>
             </div>
         </div>
     )
