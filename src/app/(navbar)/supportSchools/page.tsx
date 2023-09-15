@@ -11,7 +11,7 @@ export default function () {
         return NextResponse.error()
     }
     return (
-        <div>
+        <div className="w-screen overflow-hidden">
             <Box>
                 <ParagraphTitle>Supporting Schools</ParagraphTitle>
                 <ListView>

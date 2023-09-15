@@ -8,5 +8,6 @@ export const navList: LinkObject[] = [
         content: [{title: 'Clothing', content: '/welfare/clothing'}, {title: 'Catering', content: '/welfare/catering'}, {title: 'Accessories', content:'/welfare/accessories'}, {title: 'Entertainment', content: '/welfare/entertainment'}, {title: 'Others', content: '/welfare/others'}]
     },
     { title: "Supporting Schools", content: "/supportSchools" },
+    { title: 'Election Platform', content: '/election'},
     { title: "Photos", content: "/photo" },
 ]

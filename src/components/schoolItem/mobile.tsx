@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function MobileListItem({ school }: { school: School }) {
     return (
-        <div className="flex items-center gap-1 my-2 w-screen">
+        <div className="flex items-center gap-1 my-2 w-screen overflow-x-scroll">
             <span className="whitespace-nowrap">
                 {school.schoolName.chineseName}
             </span>
