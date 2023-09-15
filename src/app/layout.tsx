@@ -28,10 +28,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className={`${playfair.className} ${notoSerif.className} scrollbar`}>
 			<link rel='icon' href='/icon.ico' sizes='any' />
 			<meta name='theme-color' content='#fdf9ee' />
-			<body className={"transition-all m-0 p-0 w-screen overflow-x-hidden font-serif"}>
+			<body className="transition-all m-0 p-0 w-screen overflow-x-hidden font-serif">
 				<Providers>
 					{children}
 				</Providers>
