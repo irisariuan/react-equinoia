@@ -8,7 +8,7 @@ export default function () {
 
     return (
         <div className="p-2">
-            <ParagraphTitle>Accessories</ParagraphTitle>
+            <ParagraphTitle>Others</ParagraphTitle>
             <Separator alignCenter={false} />
             <div className="mt-6 lg:mt-12"></div>
             {
