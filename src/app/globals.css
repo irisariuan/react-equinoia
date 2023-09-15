@@ -11,11 +11,15 @@
 
 @layer base {
 	body {
-		@apply dark:bg-rice-dark bg-white
+		@apply dark:bg-rice-dark bg-white;
+		@apply scrollbar;
 	}
 }
 
 @layer utilities {
+	.scrollbar {
+		scrollbar-gutter: stable;
+	}
 	/* .scrollbar::-webkit-scrollbar {
 		width: 10px;
 	}

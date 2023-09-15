@@ -17,7 +17,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }) {
 	return (
-		<html lang="en">
+		<html lang="en" className='scrollbar'>
 			<link rel='icon' href='/icon.ico' sizes='any' />
 			<meta name='theme-color' content='#fdf9ee' />
 			<body className={inter.className + ' transition-all m-0 p-0 w-screen overflow-x-hidden'}>
