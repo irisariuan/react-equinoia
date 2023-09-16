@@ -3,7 +3,7 @@ import { faCaretDown, faCaretUp, faChevronRight } from "@fortawesome/free-solid-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { AnimatePresence, motion, useAnimate } from "framer-motion"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 export interface LinkObject {
     title: string,
@@ -92,12 +92,16 @@ export function NormalDropdownLinks({ links, pathname, customHandler }: { links:
             customHandler()
         }
         setOpen(!opened)
-        if (opened) {
-            animate(arrowRef.current, { rotate: ['0.5turn', '0turn'] })
-            return
-        }
-        animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
     }
+
+    useEffect(() => {
+        if (opened) {
+            animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
+        } else {
+            animate(arrowRef.current, { rotate: ['0.5turn', '0turn'] })
+        }
+    }, [opened])
+
     if (isString(links.content)) return
 
     return (
@@ -108,22 +112,22 @@ export function NormalDropdownLinks({ links, pathname, customHandler }: { links:
             </button>
             <AnimatePresence>
                 {
-                    opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} className="absolute top-20 flex flex-col origin-top items-center justify-center">
+                    opened && <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [null, 0] }} className="absolute top-20 flex flex-col origin-top items-center justify-center">
                         <div className="flex flex-col p-2 w-max h-max z-[200] bg-rice border border-rice-content rounded-xl gap-2 justify-center items-center">
-                            <motion.button animate={{ rotate: ['0.5turn', '0turn'] }} title="Back" onClick={clickHandler} className="h-full">
+                            <motion.button animate={{ rotate: ['0.5turn', '0turn'], opacity: [0, 1] }} title="Back" onClick={clickHandler} className="h-full">
                                 <FontAwesomeIcon icon={faCaretUp} />
                             </motion.button>
                             {
                                 links.content.map((v, i) => {
                                     if (isString(v.content)) {
                                         return (
-                                            <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} transition={{ delay: i / 10 }} className="origin-bottom">
+                                            <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [null, 0] }} transition={{ delay: i / 10 }} className="origin-bottom">
                                                 <NormalLink link={v} pathname={pathname} customHandler={() => { setOpen(false) }} />
                                             </motion.div>
                                         )
                                     }
                                     return (
-                                        <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [1, 0] }} transition={{ delay: i / 10 }} className="origin-bottom">
+                                        <motion.div animate={{ scaleY: [0, 1] }} exit={{ scaleY: [null, 0] }} transition={{ delay: i / 10 }} className="origin-bottom">
                                             <NormalDropdownLinks links={v} pathname={pathname} customHandler={() => { setOpen(false) }} />
                                         </motion.div>
                                     )
