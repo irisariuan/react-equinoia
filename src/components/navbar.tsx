@@ -3,7 +3,7 @@
 import { Righteous, Noto_Sans_TC } from "next/font/google";
 import NormalNav from "./nav/normalNav";
 import MobileNav from "./nav/mobileNav";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Banner from "./banner";
 import { useAnimate } from "framer-motion";
 import Link from "next/link";
@@ -13,6 +13,7 @@ import { navList } from "@/lib/nav/navList";
 const OFFSET_Y = 90;
 
 export default function () {
+    const navListMemo = useMemo(() => navList, [])
     const [isMobile, setMobileState] = useState(true)
     const [r, animate] = useAnimate()
     const [showNav, setShowNav] = useState(true)
@@ -70,9 +71,9 @@ export default function () {
                 <span className={"text-xl lg:text-3xl m-2 text-black dark:text-rice flex-1 flex items-center gap-2"}>MCKLN <div className="h-5 lg:h-7 rounded w-px bg-gold-300 inline-block" /> <Link href="/" className="text-gold-400">Equinoia 凝晞</Link></span>
                 {
                     ok && (!isMobile ? (
-                        <NormalNav links={navList} />
+                        <NormalNav links={navListMemo} />
                     ) : (
-                        <MobileNav links={navList} setShouldShow={setShouldShow} />
+                        <MobileNav links={navListMemo} setShouldShow={setShouldShow} />
                     ))
                 }
             </div>
