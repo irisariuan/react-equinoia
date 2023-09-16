@@ -9,7 +9,7 @@ export default function () {
     return (
         <Box itemsAlign="left">
             <BigLink href="/welfare/accessories">Accessories</BigLink>
-            <BigLink href="/welfare/catering" disabled>Catering</BigLink>
+            <BigLink href="/welfare/catering">Catering</BigLink>
             <BigLink href="/welfare/clothing">Clothing</BigLink>
             <BigLink href="/welfare/entertainment" disabled>Entertainment</BigLink>
             <BigLink href="/welfare/others">Others</BigLink>
