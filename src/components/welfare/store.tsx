@@ -60,7 +60,7 @@ export default function ({ store }: { store: WelfareStore }) {
                     }
                     {
                         store.link &&
-                        <li>
+                        <li className="w-fit">
                             <StoreLink link={store.link} />
                         </li>
                     }
