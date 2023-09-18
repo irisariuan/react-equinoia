@@ -7,7 +7,7 @@ export interface School {
     },
     cabinetName: string
 }
-export function readCsv(filename: string, splitPoint = 3): School[] | undefined {
+export function readCsv(filename: string, splitPoint = 3) {
     return readFileSync(filename, { encoding: 'utf-8' }).replaceAll('\n', ',').replaceAll('\r', '').match(/([^\\\][^,]|\\,)+/g)?.reduce((old: string[][], n) => {
         let o = old
         o[o.length - 1].push(n.trim())
@@ -15,7 +15,16 @@ export function readCsv(filename: string, splitPoint = 3): School[] | undefined 
             o.push([])
         }
         return o
-    }, [[]]).map(([englishName, chineseName, cabinetName]): School => {
-        return { schoolName: { englishName, chineseName }, cabinetName }
-    }).slice(0, -1)
+    }, [[]])
+}
+
+export async function readSchoolList(filename: string) {
+    try {
+        const result: {schools: School[]} = await (await fetch('https://ariuan.com/api/equinoia/supportingSchoolList')).json()
+        return result.schools
+    } catch (err) {
+        return readCsv(filename)?.map(([englishName, chineseName, cabinetName]): School => {
+            return { schoolName: { englishName, chineseName }, cabinetName }
+        }).slice(0, -1)
+    }
 }

@@ -1,12 +1,12 @@
 import { Box } from "@/components/ui/box";
 import { ListView } from "@/components/ui/list";
 import { ParagraphTitle } from "@/components/ui/paragraph/title";
-import { readCsv } from "@/lib/read/readCsv";
+import { readSchoolList } from "@/lib/read/readCsv";
 import { NextResponse } from "next/server";
 import { SchoolListItem } from '@/components/schoolListItem'
 
-export default function () {
-    const supportingSchools = readCsv(process.cwd() + '/src/private/newSupportingSchoolList.csv')
+export default async function () {
+    const supportingSchools = await readSchoolList(process.cwd() + '/src/private/newSupportingSchoolList.csv')
     if (!supportingSchools) {
         return NextResponse.error()
     }
