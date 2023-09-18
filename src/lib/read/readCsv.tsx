@@ -18,11 +18,12 @@ export function readCsv(filename: string, splitPoint = 3) {
     }, [[]])
 }
 
-export async function readSchoolList(filename: string) {
+export async function readSchoolList(filename: string, api = 'ariuan.com') {
     try {
-        const result: {schools: School[]} = await (await fetch('https://ariuan.com/api/equinoia/supportingSchoolList')).json()
+        const result: {schools: School[]} = await (await fetch(`https://${api}/api/equinoia/supportingSchoolList`, {signal: AbortSignal.timeout(500)})).json()
         return result.schools
     } catch (err) {
+        console.log('failed to fetch data')
         return readCsv(filename)?.map(([englishName, chineseName, cabinetName]): School => {
             return { schoolName: { englishName, chineseName }, cabinetName }
         }).slice(0, -1)
