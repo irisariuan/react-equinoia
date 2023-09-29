@@ -19,7 +19,7 @@ const notoSerif = Noto_Serif_HK({
 
 export const metadata: Metadata = {
 	title: 'Equinoia',
-	description: 'Propose Students‘ Union Candidate Cabinet No.1 of MCKLN - Equinoia',
+	description: 'Students‘ Union of MCKLN 2023-2024 - Equinoia',
 }
 
 export default function RootLayout({
