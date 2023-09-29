@@ -31,7 +31,7 @@ export default function RootLayout({
 		<html lang="en" className={`${playfair.className} ${notoSerif.className} scrollbar`}>
 			<link rel='icon' href='/favicon.ico' sizes='any' />
 			<meta name='theme-color' content='#fdf9ee' />
-			<body className="transition-all m-0 p-0 w-screen overflow-x-hidden font-serif">
+			<body className="text-black transition-all m-0 p-0 w-screen overflow-x-hidden font-serif">
 				<Providers>
 					{children}
 				</Providers>
