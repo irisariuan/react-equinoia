@@ -43,7 +43,7 @@ export function MobileDropdownLinks({ link, pathname, activeHandler, subLink = f
                 animate(arrowRef.current, { rotate: ['0turn', '0.5turn'] })
             }}>
                 <FontAwesomeIcon icon={faCaretDown} ref={arrowRef} className="mr-2" />
-                <span className={subLink ? 'text-2xl lg:text-3xl font-semibold' : 'text-3xl lg:text-5xl' + ((!opened && isSublink(link.content, pathname)) ? ' font-bold' : '') + " text-rice-dark dark:text-white"}>{link.title}</span>
+                <span className={subLink ? 'text-2xl lg:text-3xl font-semibold' : 'text-3xl lg:text-5xl' + ((!opened && isSublink(link.content, pathname)) ? ' font-bold' : '') + " text-rice-dark "}>{link.title}</span>
             </div>
             <div>
                 <AnimatePresence>
@@ -68,8 +68,8 @@ export function MobileLink({ link, pathname, activeHandler, subLink = false, del
         return (
             <motion.div animate={{ opacity: [0, 1], scaleY: [0, 1], transition: { duration: 0.15, delay: delay * 0.12, ease: 'easeIn' } }} initial={{ transformOrigin: 'bottom' }}>
                 <Link href={link.content} className={"flex items-center justify-center m-4 lg:my-8 " + ((pathname === link.content) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
-                    {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
-                    <span className={subLink ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-5xl' + " text-gold-400 dark:text-white"}>{link.title}</span>
+                    {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 " /> */}
+                    <span className={subLink ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-5xl' + " text-gold-400 "}>{link.title}</span>
                 </Link>
             </motion.div>
         )
@@ -77,8 +77,8 @@ export function MobileLink({ link, pathname, activeHandler, subLink = false, del
     return (
         <motion.div key={link.content} animate={{ opacity: [0, 1], scale: [0, 1], translateY: ['-50%', '0%'], transition: { duration: 0.4, delay: delay * 0.08 } }} transition={{ duration: 0.2 }} exit={{ scale: [1, 0] }}>
             <Link href={link.content} className={"flex items-center justify-center m-4 lg:my-8 " + ((pathname === link.content) ? 'font-bold' : '[&>*]:hover:text-blue-500')} onClick={activeHandler}>
-                {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 dark:text-rice" /> */}
-                <span className={subLink ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-5xl' + " text-rice-dark dark:text-white"}>{link.title}</span>
+                {/* <FontAwesomeIcon icon={faChevronRight} className="mr-3 text-lg lg:text-2xl lg:mr-5 text-gold-400 " /> */}
+                <span className={subLink ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-5xl' + " text-rice-dark "}>{link.title}</span>
             </Link>
         </motion.div>
     )

@@ -28,7 +28,7 @@ export default function() {
 
     return (
         <AnimatePresence>
-        {ad && <motion.div className="flex bg-nav/80 dark:bg-nav-dark/80 border-b border-rice-content/50 dark:border-white/50 backdrop-blur-lg -z-10 w-screen sticky p-3 items-center" exit={{opacity: [1, 0]}}>
+        {ad && <motion.div className="flex bg-nav/80 border-b border-rice-content/50 backdrop-blur-lg -z-10 w-screen sticky p-3 items-center" exit={{opacity: [1, 0]}}>
             <div className="flex-1 mx-1 p-1">
                 <p className="leading-tight sm:text-lg">Welcome to the official page of Equinoia, the Proposed Students' Union Candidate Cabinet No.1</p>
                 <span className="text-sm">Vote us on Sep 29!</span>

@@ -13,7 +13,7 @@ export default function Home() {
     // }, [])
 
     return (
-        <main className="dark:text-white">
+        <main className="">
             <div className='bg-white h-screen w-full flex justify-center items-center flex-col'>
                 <IconBackground />
                 <div className='flex justify-center z-30 w-full'>
