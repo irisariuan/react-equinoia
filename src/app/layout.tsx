@@ -19,7 +19,7 @@ const notoSerif = Noto_Serif_HK({
 
 export const metadata: Metadata = {
 	title: 'Equinoia',
-	description: 'Propose Students‘ Union Candidate Cabinet No.1 of MCKLN - Equinoia',
+	description: 'Students‘ Union of MCKLN 2023-2024 - Equinoia',
 }
 
 export default function RootLayout({
@@ -31,7 +31,7 @@ export default function RootLayout({
 		<html lang="en" className={`${playfair.className} ${notoSerif.className} scrollbar`}>
 			<link rel='icon' href='/favicon.ico' sizes='any' />
 			<meta name='theme-color' content='#fdf9ee' />
-			<body className="transition-all m-0 p-0 w-screen overflow-x-hidden font-serif">
+			<body className="text-black transition-all m-0 p-0 w-screen overflow-x-hidden font-serif">
 				<Providers>
 					{children}
 				</Providers>

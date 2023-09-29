@@ -30,8 +30,8 @@ export default function() {
         <AnimatePresence>
         {ad && <motion.div className="flex bg-nav/80 border-b border-rice-content/50 backdrop-blur-lg -z-10 w-screen sticky p-3 items-center" exit={{opacity: [1, 0]}}>
             <div className="flex-1 mx-1 p-1">
-                <p className="leading-tight sm:text-lg">Welcome to the official page of Equinoia, the Proposed Students' Union Candidate Cabinet No.1</p>
-                <span className="text-sm">Vote us on Sep 29!</span>
+                <p className="leading-tight sm:text-lg">Welcome to the official page of Equinoia, the Students' Union of the year 2023-2024</p>
+                <span className="text-sm">Thank you for your support!</span>
             </div>
             <button className="mx-3" onClick={() => { setAd(false) }} title="Close">
                 <FontAwesomeIcon className="text-xl" icon={faCircleXmark} />
