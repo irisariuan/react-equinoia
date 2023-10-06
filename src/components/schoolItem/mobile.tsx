@@ -1,16 +1,16 @@
-import { School } from "@/lib/read/readCsv";
+import { School } from "@/lib/fs/csv";
 
 export function MobileListItem({ school }: { school: School }) {
     return (
         <div className="flex items-center gap-1 my-2 w-screen overflow-x-scroll">
             <span className="whitespace-nowrap">
-                {school.schoolName.chineseName}
+                {school.schoolName.chineseName.replaceAll(/(\\)(?=,)/g, '')}
             </span>
             {(school.cabinetName !== 'TBC') &&
                 <div className="flex items-center gap-1">
                     <div className="w-px h-3 bg-rice-content" />
                     <div>
-                        {school.cabinetName}
+                        {school.cabinetName.replaceAll(/(\\)(?=,)/g, '')}
                     </div>
                     {/* {(school.instagramName === 'TBC') ?
                         (
