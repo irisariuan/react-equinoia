@@ -1,8 +1,4 @@
 import { School } from "@/lib/read/readCsv";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
 import { Label } from "../ui/label";
 import { ListItem } from "../ui/list";
 
