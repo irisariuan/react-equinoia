@@ -5,6 +5,16 @@ import { readToken } from "@/lib/fs/token"
 export const dynamic = 'auto'
 export const revalidate = 0
 
+export async function OPTIONS(request: Request) {
+    return Response.json({}, {headers: {
+        'Access-Control-Allow-Methods': 'OPTIONS,POST',
+        'Access-Control-Allow-Headers': 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Authorization, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers',
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Allow': 'GET,POST,OPTIONS'
+    }})
+}
+
 export async function POST(request: Request) {
     if (request.method !== 'POST') {
         return Response.error()
