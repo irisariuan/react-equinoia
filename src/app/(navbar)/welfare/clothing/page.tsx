@@ -5,7 +5,7 @@ import { readWelfare } from "@/lib/fs/welfare"
 import path from "path"
 
 export default function () {
-    const welfare = readWelfare(path.join(process.cwd(), 'src' , 'private', 'clothing.json'))
+    const welfare = readWelfare(process.cwd() + '/src/private/welfare/clothing.json')
 
     return (
         <div className="p-2">
