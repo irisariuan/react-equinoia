@@ -1,6 +1,6 @@
 import { readSchools } from "@/lib/fs/school"
 
 export async function GET(request: Request) {
-    const school = readSchools()
-    return Response.json({school})
+    const schools = await readSchools()
+    return Response.json({schools})
 }
