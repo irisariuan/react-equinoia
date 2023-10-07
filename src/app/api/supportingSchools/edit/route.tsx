@@ -1,4 +1,4 @@
-import { SchoolEditRequest, readCsv, writeCsv } from "@/lib/fs/csv"
+import { SchoolEditRequest, addScool, readSchools, removeSchool } from "@/lib/fs/school"
 import { createHash } from 'node:crypto'
 import { readToken } from "@/lib/fs/token"
 
@@ -19,12 +19,8 @@ export async function POST(request: Request) {
         return Response.json({ message: 'This route requires token for authentication' }, { status: 401 })
     }
 
-    if (r.type === 'change') {
-        writeCsv(process.cwd() + '/src/private/newSupportingSchoolList.csv', r.data)
-        return Response.json({ message: 'OK' }, { status: 200 })
-    }
 
-    let f = readCsv(process.cwd() + '/src/private/newSupportingSchoolList.csv')
+    let f = readSchools()
     if (!f) {
         return Response.json({ message: 'Internal Server Error' }, { status: 500 })
     }
@@ -32,20 +28,16 @@ export async function POST(request: Request) {
     for (const school of r.data) {
         switch (r.type) {
             case 'add':
-                if (f.find(s => s.schoolName.chineseName.trim() === school.schoolName.chineseName.trim())) {
+                if (!await addScool(school)) {
                     return Response.json({ message: 'School already exists' }, { status: 400 })
                 }
-                f.push(school)
                 break
             case 'remove':
-                const i = f.findIndex(s => s.schoolName.chineseName.trim() === school.schoolName.chineseName.trim())
-                if (i === -1) {
-                    return Response.json({ message: 'School does not exist' }, { status: 400 })
+                if (!await removeSchool(school)) {
+                    return Response.json({ message: 'School not found' }, { status: 400 })
                 }
-                f.splice(i, 1)
                 break
         }
     }
-    writeCsv(process.cwd() + '/src/private/newSupportingSchoolList.csv', f)
     return Response.json({ message: 'OK' }, { status: 200 })
 }

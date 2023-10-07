@@ -1,4 +1,4 @@
-import { School } from "@/lib/fs/csv";
+import { School } from "@/lib/fs/school";
 import { Label } from "../ui/label";
 import { ListItem } from "../ui/list";
 

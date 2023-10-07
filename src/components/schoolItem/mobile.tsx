@@ -1,4 +1,4 @@
-import { School } from "@/lib/fs/csv";
+import { School } from "@/lib/fs/school";
 
 export function MobileListItem({ school }: { school: School }) {
     return (

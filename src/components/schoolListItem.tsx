@@ -1,6 +1,6 @@
 'use client'
 
-import { School } from "@/lib/fs/csv"
+import { School } from "@/lib/fs/school"
 import { useSize } from "@/lib/useSize"
 import { DesktopListItem } from "./schoolItem/desktop"
 import { MobileListItem } from "./schoolItem/mobile"

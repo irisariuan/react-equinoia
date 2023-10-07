@@ -2,9 +2,10 @@ import { ParagraphTitle } from "@/components/ui/paragraph/title"
 import Separator from "@/components/ui/separator"
 import Store from "@/components/welfare/store"
 import { readWelfare } from "@/lib/fs/welfare"
+import path from "path"
 
 export default function () {
-    const welfare = readWelfare(process.cwd() + '/src/private/welfare/food.json')
+    const welfare = readWelfare(path.join(process.cwd(), 'src' , 'private', 'welfare', 'food.json'))
 
     return (
         <div className="p-2">

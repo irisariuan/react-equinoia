@@ -1,6 +1,6 @@
-import { readCsv } from "@/lib/fs/csv"
+import { readSchools } from "@/lib/fs/school"
 
 export async function GET(request: Request) {
-    const school = readCsv(process.cwd() + '/src/private/newSupportingSchoolList.csv')
+    const school = readSchools(process.cwd() + '/src/private/newSupportingSchoolList.csv')
     return Response.json({school})
 }
