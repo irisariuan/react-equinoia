@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto'
 import { readToken } from "@/lib/fs/token"
 
 export const dynamic = 'auto'
+export const revalidate = 0
 
 export async function POST(request: Request) {
     if (request.method !== 'POST') {
