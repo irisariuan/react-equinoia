@@ -22,16 +22,28 @@ export async function readSchools(): Promise<School[]> {
     return res
 }
 
-export async function addScool(school: School) {
+export async function removeAllSchools() {
+    await kv.del('cabinetName')
+    await kv.del('englishName')
+    await kv.del('chineseName')
+}
+
+export async function checkPresence(school: School) {
     const index = await kv.lpos('chineseName', school.schoolName.chineseName)
     if (index !== null) {
+        return true
+    }
+    return false
+}
+
+export async function addScool(school: School) {
+    if (await checkPresence(school)) {
         return false
     }
-    await kv.lpush('cabinetName', school.cabinetName)
-    await kv.lpush('englishName', school.schoolName.englishName)
-    await kv.lpush('chineseName', school.schoolName.chineseName)
+    await Promise.all([kv.lpush('cabinetName', school.cabinetName), kv.lpush('englishName', school.schoolName.englishName), kv.lpush('chineseName', school.schoolName.chineseName)])
     return true
 }
+
 export async function removeSchool(school: School) {
     const index = await kv.lpos('chineseName', school.schoolName.chineseName)
     if (index === null) {
