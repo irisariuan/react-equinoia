@@ -1,20 +1,16 @@
-import { School } from "@/lib/read/readCsv";
-import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
+import { School } from "@/lib/fs/school";
 
 export function MobileListItem({ school }: { school: School }) {
     return (
         <div className="flex items-center gap-1 my-2 w-screen overflow-x-scroll">
             <span className="whitespace-nowrap">
-                {school.schoolName.chineseName}
+                {school.schoolName.chineseName.replaceAll(/(\\)(?=,)/g, '')}
             </span>
             {(school.cabinetName !== 'TBC') &&
                 <div className="flex items-center gap-1">
                     <div className="w-px h-3 bg-rice-content" />
                     <div>
-                        {school.cabinetName}
+                        {school.cabinetName.replaceAll(/(\\)(?=,)/g, '')}
                     </div>
                     {/* {(school.instagramName === 'TBC') ?
                         (

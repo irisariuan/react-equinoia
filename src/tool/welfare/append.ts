@@ -1,4 +1,4 @@
-import { WelfareStore } from "@/lib/read/readWelfare"
+import { WelfareStore } from "@/lib/fs/welfare"
 import { readFileSync, readdirSync, writeFileSync } from "fs"
 
 const result: WelfareStore[] = []

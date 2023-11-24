@@ -1,12 +1,13 @@
 import { Box } from "@/components/ui/box";
 import { ListView } from "@/components/ui/list";
 import { ParagraphTitle } from "@/components/ui/paragraph/title";
-import { readCsv } from "@/lib/read/readCsv";
+import { readSchools } from "@/lib/fs/school";
 import { NextResponse } from "next/server";
 import { SchoolListItem } from '@/components/schoolListItem'
+import { Suspense } from "react";
 
-export default function () {
-    const supportingSchools = readCsv(process.cwd() + '/src/private/newSupportingSchoolList.csv')
+export default async function () {
+    const supportingSchools = await readSchools()
     if (!supportingSchools) {
         return NextResponse.error()
     }
@@ -15,13 +16,15 @@ export default function () {
             <Box>
                 <ParagraphTitle>Supporting Schools</ParagraphTitle>
                 <ListView>
-                    {
-                        supportingSchools.map((v, i) => {
-                            return (
-                                <SchoolListItem school={v} key={i} />
-                            )
-                        })
-                    }
+                    <Suspense fallback={<p>Loading Supporting Schools...</p>}>
+                        {
+                            supportingSchools.map((v, i) => {
+                                return (
+                                    <SchoolListItem school={v} key={i} />
+                                )
+                            })
+                        }
+                    </Suspense>
                 </ListView>
             </Box>
         </div>

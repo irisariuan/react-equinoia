@@ -1,4 +1,4 @@
-import { WelfareStore } from "@/lib/read/readWelfare";
+import { WelfareStore } from "@/lib/fs/welfare";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTowerBroadcast } from "@fortawesome/free-solid-svg-icons";
 import { StoreLink } from "./store/link";
