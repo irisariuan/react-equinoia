@@ -8,6 +8,7 @@ import IgLink from "./store/instagramLink";
 import Tooltip from "../ui/tooltip";
 import { StorePhone } from "./store/phone";
 import { StoreTip } from "./store/tip";
+import { StorePhotoContainer } from "./store/photoContainer";
 
 export default function ({ store }: { store: WelfareStore }) {
 
@@ -84,6 +85,12 @@ export default function ({ store }: { store: WelfareStore }) {
                                     )
                                 })
                             }
+                        </li>
+                    }
+                    {
+                        (store.photoLinks && store.photoLinks?.length > 0) && 
+                        <li>
+                            <StorePhotoContainer photoLinks={store.photoLinks} />
                         </li>
                     }
                 </ol>

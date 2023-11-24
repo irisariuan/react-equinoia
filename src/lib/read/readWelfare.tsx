@@ -10,6 +10,7 @@ export interface WelfareStore {
     isOnline: boolean,
     link?: string,
     phoneNo?: string,
+    photoLinks?: string[]
 }
 export function readWelfare(filename: string): WelfareStore[] {
     const o: { store: WelfareStore[] } = JSON.parse(readFileSync(filename, { encoding: 'utf8' }))

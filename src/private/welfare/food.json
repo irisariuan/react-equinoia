@@ -68,7 +68,10 @@
             "location": [
                 "油麻地彌敦道僑江大廈524地下A"
             ],
-            "isOnline": false
+            "isOnline": false,
+            "photoLinks": [
+                "/stores/tickets/jordan.jpeg"
+            ]
         },
         {
             "name": "禮三井刺身壽司",
