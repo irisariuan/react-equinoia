@@ -2,12 +2,16 @@ import { Box } from "@/components/ui/box"
 import { ParagraphContent } from "@/components/ui/paragraph/content"
 import { ParagraphTitle } from "@/components/ui/paragraph/title"
 import Separator from "@/components/ui/separator"
+import { Noto_Serif_HK, Aleo } from 'next/font/google'
+
+const NotoSerif = Noto_Serif_HK({ weight: 'variable', subsets: ["latin"] })
+const aleo = Aleo({ weight: 'variable', subsets: ["latin"] })
 
 export default async function () {
     await new Promise(r => setInterval(r, 2000))
     return (
         <div className="w-screen flex flex-col items-center justify-center mt-2 p-2">
-            <div className="w-4/5">
+            <div className={"w-4/5 " + aleo.className}>
                 <Box>
                     <ParagraphTitle className="font-bold">About Equinoia</ParagraphTitle>
                 </Box>
@@ -51,7 +55,7 @@ export default async function () {
                     <Separator />
                 </div>
             </div>
-            <div className="w-4/5 mt-4">
+            <div className={"w-4/5 mt-4 " + NotoSerif.className}>
                 <div className="mb-6 lg:mb-10 mt-4">
                     <ParagraphTitle>
                         「Equinox」:
