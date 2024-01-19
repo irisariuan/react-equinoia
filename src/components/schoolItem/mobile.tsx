@@ -2,7 +2,7 @@ import { School } from "@/lib/fs/school";
 
 export function MobileListItem({ school }: { school: School }) {
     return (
-        <div className="flex items-center gap-1 my-2 w-screen overflow-x-scroll">
+        <div className="flex items-center gap-1 my-2 w-full overflow-x-auto">
             <span className="whitespace-nowrap">
                 {school.schoolName.chineseName.replaceAll(/(\\)(?=,)/g, '')}
             </span>

@@ -1,6 +1,6 @@
 import path from "node:path";
 import { config } from 'dotenv'
-import { addScool, readCsv } from "../../lib/fs/school";
+import { addSchool, readCsv } from "../../lib/fs/school";
 
 config({path: path.join(process.cwd(), '.env.development.local')});
 
@@ -9,7 +9,7 @@ config({path: path.join(process.cwd(), '.env.development.local')});
     console.log('Start adding schools')
     if (csv) {
         for (const school of csv) {
-            const re = await addScool(school)
+            const re = await addSchool(school)
             process.stdout.moveCursor(0, -1)
             process.stdout.clearScreenDown()
             if (re) {

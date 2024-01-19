@@ -36,7 +36,7 @@ export async function checkPresence(school: School) {
     return false
 }
 
-export async function addScool(school: School) {
+export async function addSchool(school: School) {
     if (await checkPresence(school)) {
         return false
     }

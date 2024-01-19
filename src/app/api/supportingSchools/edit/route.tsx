@@ -1,4 +1,4 @@
-import { SchoolEditRequest, addScool, readSchools, removeSchool } from "@/lib/fs/school"
+import { SchoolEditRequest, addSchool, readSchools, removeSchool } from "@/lib/fs/school"
 import { createHash } from 'node:crypto'
 import { readToken } from "@/lib/fs/token"
 
@@ -39,7 +39,7 @@ export async function POST(request: Request) {
     for (const school of r.data) {
         switch (r.type) {
             case 'add':
-                if (!await addScool(school)) {
+                if (!await addSchool(school)) {
                     return Response.json({ message: 'School already exists' }, { status: 400 })
                 }
                 break
