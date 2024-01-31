@@ -34,9 +34,14 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# remove local test files
 /src/test/*
 !/src/test/.gitkeep
+# remove releases
 /release/*.zip
 
-/src/tool/welfare/*.js
-/src/tool/welfare/*.txt
+# remove compiled js files
+/src/**/*.js
+
+# remove vscode env files
+.vscode/*
